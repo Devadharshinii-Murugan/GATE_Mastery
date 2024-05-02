@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                 <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="file:///C:/Users/murug/Documents/PYQ'2024.html">PYQ's</a></li>
+               <li><a href="#topic-weightage">Weightage</a></li>
+                <li><a href="file:///C:/Users/murug/Documents/try.html">Online courses</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+   <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+   <h1>GATE 2024 Question Papers and Final Answer Keys</h1>
+</div>
+</div>
+</div>
+</section>
+    <table>
+        <tr>
+            <th>Question Paper</th>
+            <th>Final Answer Key</th>
+            <th>Question Paper</th>
+            <th>Final Answer Key</th>
+        </tr>
+        <tr>
+            <tr>
+    <td><a href="C:\Users\murug\Downloads\GATE-2024 (Aerospace Engineering).pdf">Aerospace Engineering (AE)</a></td>
+    <td><a href="C:\Users\murug\Downloads\AE AnswerKey.pdf">AE Key</a></td>
+    <td><a href="C:\Users\murug\Downloads\GATE-2024 (Aerospace Engineering).pdf">Instrumental Engineering (IE)</a></td>
+    <td><a href="C:\Users\murug\Downloads\AE AnswerKey.pdf">AE Key</a></td>
+    </tr>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Agricultural Engineering).pdf">Agricultural Engineering (AG)</td>
+            <td><a href="C:\Users\murug\Downloads\AG AnswerKey.pdf">AG Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(MA).pdf">Mathematics (MA)</td>
+            <td><a href="C:\Users\murug\Downloads\MAFinalAnswerKey.pdf">MA Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Architecture and Planning).pdf">Architecture and Planning (AR)</td>
+            <td><a href="C:\Users\murug\Downloads\AR AnswerKey.pdf">AR Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(ME).pdf">Mechanical Engineering (ME)</td>
+            <td> <a href="C:\Users\murug\Downloads\MEFinalAnswerKey.pdf">ME Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Biomedical Engineering).pdf">Biomedical Engineering (BM)</td>
+            <td><a href="C:\Users\murug\Downloads\BM AnswerKey.pdf">BM Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(MN).pdf">Mining Engineering (MN)</td>
+            <td><a href="C:\Users\murug\Downloads\MNFinalAnswerKey.pdf">MN Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Biotechnology).pdf">Biotechnology (BT)</td>
+            <td><a href="C:\Users\murug\Downloads\BT AnswerKey.pdf">BT Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(MT).pdf">Metallurgical Engineering (MT)</td>
+            <td><a href= "C:\Users\murug\Downloads\MTFinalAnswerKey.pdf">MT Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Civil Engineering Set1).pdf">Civil Engineering (CE-1) (Forenoon)</td>
+            <td><a href="C:\Users\murug\Downloads\CE1 AnswerKey.pdf">CE-1 Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(NM).pdf">Naval Architecture and Marine Engineering (NM)</td>
+            <td><a href= "C:\Users\murug\Downloads\NMFinalAnswerKey.pdf">NM Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Civil Engineering Set2).pdf">Civil Engineering (CE-2) (Afternoon)</td>
+            <td><a href="C:\Users\murug\Downloads\CE2 AnswerKey.pdf">CE-2 Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(PE).pdf">Petroleum Engineering (PE)</td>
+            <td><a href= "C:\Users\murug\Downloads\PEFinalAnswerKey.pdf">PE Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Chemial Engineering).pdf">Chemical Engineering (CH)</td>
+            <td><a href="C:\Users\murug\Downloads\CH AnswerKey.pdf">CH Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(Physics).pdf">Physics (PH)</td>
+            <td><a href= "C:\Users\murug\Downloads\PHFinalAnswerKey.pdf">PH Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Cs1).pdf">Computer Science and Information Technology (CS-1) (Forenoon)</td>
+            <td><a href="C:\Users\murug\Downloads\CS1 AnswerKey.pdf">CS-1 Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(PI).pdf">Production and Industrial Engineering (PI)</td>
+            <td><a href= "C:\Users\murug\Downloads\PIFinalAnswerKey.pdf">PI Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (CS2).pdf">Computer Science and Information Technology (CS-2) (Afternoon)</td>
+            <td><a href="C:\Users\murug\Downloads\CS2 AnswerKey.pdf">CS-2 Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(ST).pdf">Statistics (ST)</td>
+            <td><a href= "C:\Users\murug\Downloads\STFinalAnswerKey.pdf">ST Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (Chem).pdf">Chemistry (CY)</td>
+            <td><a href="C:\Users\murug\Downloads\CY AnswerKey.pdf">CY Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(Tf).pdf">Textile Engineering and Fibre Science (TF)</td>
+            <td><a href= "C:\Users\murug\Downloads\TFFinalAnswerKey.pdf">TF Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (DA).pdf">Data Science and Artificial Intelligence (DA)</td>
+            <td><a href="C:\Users\murug\Downloads\DA AnswerKey.pdf">DA Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(XE).pdf">Engineering Sciences (XE)</td>
+            <td><a href= "C:\Users\murug\Downloads\XEFinalAnswerKey.pdf">XE Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(Ec).pdf">Electronics and Communication Engineering (EC)</td>
+               <td><a href="C:\Users\murug\Downloads\EC AnswerKey.pdf">EC Key</td>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(Humanities  & Social Sciences - Economics (XH-C1).pdf">Humanities & Social Sciences - Economics (XH-C1)</td>
+            <td><a href= "C:\Users\murug\Downloads\XH-C1FinalAnswerKey.pdf">XH-C1 Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024 (EE).pdf">Electrical Engineering (EE)</td>
+           <td><a href="C:\Users\murug\Downloads\EE AnswerKey.pdf">EE Key</td>
+            <td><a href="C:\Users\murug\Downloads\XH-C2.pdf">Humanities & Social Sciences - English (XH-C2)</td>
+            <td><a href= "C:\Users\murug\Downloads\XH-C2FinalAnswerKey.pdf">XH-C2 Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(ES).pdf">Environmental Science & Engineering (ES)</td>
+             <td><a href="C:\Users\murug\Downloads\ES AnswerKey.pdf">ES Key</td>
+            <td><a href="C:\Users\murug\Downloads\XHC3.pdf">Humanities & Social Sciences - Linguistics (XH-C3)</td>
+            <td><a href= "C:\Users\murug\Downloads\XH-C3FinalAnswerKey.pdf">XH-C3 Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(GE).pdf">Ecology and Evolution (EY)</td>
+            <td><a href="C:\Users\murug\Downloads\EY AnswerKey.pdf">EY Key</td>
+            <td><a href="C:\Users\murug\Downloads\XHC4.pdf">Humanities & Social Sciences - Philosophy (XH-C4)</td>
+            <td><a href= "C:\Users\murug\Downloads\XH-C4FinalAnswerKey.pdf">XH-C4 Key</td>
+        </tr>
+        <tr>
+             <td><a href="C:\Users\murug\Downloads\GATE-2024(Ey).pdf">Geomatics Engineering (GE)</td>
+            <td><a href="C:\Users\murug\Downloads\GE AnswerKey.pdf">GE Key</td>
+            <td><a href="C:\Users\murug\Downloads\XHC5.pdf">Humanities & Social Sciences - Psychology (XH-C5)</td>
+            <td><a href= "C:\Users\murug\Downloads\XH-C5FinalAnswerKey.pdf">XH-C5 Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(GG1).pdf">Geology and Geophysics - Geology (GG-1)</td>
+            <td><a href="C:\Users\murug\Downloads\GG1 AnswerKey.pdf">GG-1 Key</td>
+            <td><a href="C:\Users\murug\Downloads\XHC6.pdf">Humanities & Social Sciences - Sociology (XH-C6)</td>
+            <td><a href="C:\Users\murug\Downloads\XH-C6FinalAnswerKey.pdf" >XH-C6 Key</td>
+        </tr>
+        <tr>
+            <td><a href="C:\Users\murug\Downloads\GATE-2024(GG2).pdf">Geology and Geophysics - Geophysics (GG-2)</td>
+            <td><a href="C:\Users\murug\Downloads\GG2 AnswerKey.pdf">GG-2 Key</td>
+            <td><a href="C:\Users\murug\Downloads\XL.pdf">Life Sciences (XL)</td>
+            <td><a href= "C:\Users\murug\Downloads\XLFinalAnswerKey.pdf">XL Key</td>
+        </tr>
+    </table>
+<br></br>
+<br></br>
+<h2>GATE Papers and Codes (2023)</h2>
+<br></br>
+<table border="1">
+ 
+    <tr>
+      <th>GATE Paper</th>
+      <th>Code</th>
+      <th>GATE Paper</th>
+      <th>Code</th>
+    </tr>
+  
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\AE_GATE2023.pdf">Aerospace Engineering</a></td>
+      <td>AE</td>
+      <td><a href="C:\Users\murug\Downloads\IN_GATE2023.pdf">Instrumentation Engineering</a></td>
+      <td>IN</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\AG_GATE2023.pdf">Agricultural Engineering</a></td>
+      <td>AG</td>
+      <td><a href="C:\Users\murug\Downloads\ME_GATE2023.pdf">Mathematics</a></td>
+      <td>MA</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\AR_GATE2023.pdf">Architecture and Planning</a></td>
+      <td>AR</td>
+      <td><a href="C:\Users\murug\Downloads\MN_GATE2023.pdf">Mechanical Engineering</a></td>
+      <td>ME</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\BM_GATE2023.pdf">Biomedical Engineering</a></td>
+      <td>BM</td>
+      <td><a href="C:/Users/murug/Downloads/mn_2023.pdf">Mining Engineering</a></td>
+      <td>MN</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\BT_GATE2023.pdf">Biotechnology</a></td>
+      <td>BT</td>
+      <td><a href="C:/Users/murug/Downloads/mt_2023.pdf">Metallurgical Engineering</a></td>
+      <td>MT</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\CE1_GATE2023.pdf">Civil Engineering</a></td>
+      <td>CE</td>
+      <td><a href="C:/Users/murug/Downloads/nm_2023.pdf">Naval Architecture & Marine Engineering</a></td>
+      <td>NM</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\CH_GATE2023.pdf">Chemical Engineering</a></td>
+      <td>CH</td>
+      <td><a href="C:/Users/murug/Downloads/pe_2023.pdf">Petroleum Engineering</a></td>
+      <td>PE</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\CS_GATE2023.pdf">Computer Science & Information Technology</a></td>
+      <td>CS</td>
+      <td><a href="C:/Users/murug/Downloads/ph_2023.pdf">Physics</a></td>
+      <td>PH</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\CY_GATE2023.pdf">Chemistry</a></td>
+      <td>CY</td>
+      <td><a href="C:/Users/murug/Downloads/pi_2023.pdf">Production & Industrial Engineering</a></td>
+      <td>PI</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\EC_GATE2023.pdf">Electronics & Communication Engineering</a></td>
+      <td>EC</td>
+      <td><a href="C:/Users/murug/Downloads/st_2023.pdf">Statistics</a></td>
+      <td>ST</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\EE_GATE2023.pdf">Electrical Engineering</a></td>
+      <td>EE</td>
+      <td><a href="C:/Users/murug/Downloads/tf_2023.pdf">Textile Engineering & Fibre Science</a></td>
+      <td>TF</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\ES_GATE2023.pdf">Environmental Science & Engineering</a></td>
+      <td>ES</td>
+      <td><a href="C:/Users/murug/Downloads/xe_2023.pdf">Engineering Sciences</a></td>
+      <td>XE</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\EY_GATE2023.pdf">Ecology and Evolution</a></td>
+      <td>EY</td>
+      <td><a href="C:/Users/murug/Downloads/xh_c1_2023.pdf">Humanities & Social Sciences - Economics (XH-C1)</a></td>
+      <td>XH-C1</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\GE_GATE2023.pdf">Geomatics Engineering</a></td>
+      <td>GE</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\GG1_GATE2023.pdf">Geology & Geophysics - Geology (GG-1)</a></td>
+      <td>GG-1</td>
+      <td><a href="C:\Users\murug\Downloads\xh_c2_2023.pdf">Humanities & Social Sciences - English (XH-C2)</a></td>
+      <td>XH-C2</td>
+    </tr>
+    <tr>
+      <td><a href="C:\Users\murug\Downloads\GG2_GATE2023.pdf">Geology & Geophysics - Geophysics (GG-2)</a></td>
+      <td>GG-2</td>
+      <td><a href="C:\Users\murug\Downloads\xh_c3_2023.pdf">Humanities & Social Sciences - Linguistics (XH-C3)</a></td>
+      <td>XH-C3</td>
+    </tr>
+    <tr>
+    <td><a href="C:\Users\murug\Downloads\xh_c4_2023.pdf">Humanities & Social Sciences - Philosophy (XH-C4)</a></td>
+      <td>XH-C4</td>
+    </tr>
+    <tr>
+      <td><a href="C:/Users/murug/Downloads/in_2023.pdf">Instrumentation Engineering</a></td>
+      <td>IN</td>
+      <td><a href="C:/Users/murug/Downloads/xh_c5_2023.pdf">Humanities & Social Sciences - Psychology (XH-C5)</a></td>
+      <td>XH-C5</td>
+    </tr>
+    <tr>
+      <td><a href="C:/Users/murug/Downloads/ma_2023.pdf">Mathematics</a></td>
+      <td>MA</td>
+      <td><a href="C:/Users/murug/Downloads/xh_c6_2023.pdf">Humanities & Social Sciences - Sociology (XH-C6)</a></td>
+      <td>XH-C6</td>
+    </tr>
+    <tr>
+      <td><a href="C:/Users/murug/Downloads/mn_2023.pdf">Mining Engineering</a></td>
+      <td>MN</td>
+      <td><a href="C:\Users\murug\Downloads\XL_ANS_GATE2023.pdf">Life Sciences</a></td>
+      <td>XL</td>
+    </tr>
+</table>
+</body>
+</html>

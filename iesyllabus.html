@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+.button-wrapper {
+    text-align: center; /* Align the button center */
+}
+
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #45a049;
+}
+
+.text {
+    margin-left: 20px;
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+</style>
+</head>
+<body>
+       <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="pdf">Syllabus PDF</a></li>
+                   <li><a href="#General" onclick="scrollToContent()">IE Syllabus</a></li>
+                <li><a href="#EngineeringMathematics" onclick="scrollToMath()">For Engineering Mathematics</a></li>
+               <li><a href="#core">For Core</a></li>
+                <li><a href="#weightage" onclick="scrollToContent()">Weightage</a></li>
+                <li><a href="#tipsandtricks">Tips & Tricks</a></li>
+                <li><a href="#pattern">IE Pattern</a></li>
+            </ul>
+        </nav>
+    </header>
+    </body>
+     <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE IE Syllabus 2025</h1>
+            </div>
+            <h3>In addition to General Aptitude and Engineering Mathematics, the GATE Instrumentation Engineering syllabus includes topics such as electricity and magnetism, signals, and systems, among others, as explained below:</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Topics</th>
+    </tr>
+    <tr>
+        <td>Engineering Mathematics</td>
+        <td>
+            Linear Algebra<br>
+            Calculus<br>
+            Differential Equations<br>
+            Analysis of Complex Variables<br>
+            Probability and Statistics<br>
+            Numerical Methods
+        </td>
+    </tr>
+    <tr>
+        <td>Electricity and Magnetism</td>
+        <td>
+            Coulomb’s Law<br>
+            Electric Field Intensity<br>
+            Electric Flux Density<br>
+            Gauss’s Law<br>
+            Divergence<br>
+            Electric field and potential due to point, line, plane, and spherical charge distributions<br>
+            Effect of the dielectric medium<br>
+            Capacitance of simple configurations<br>
+            Biot‐Savart’s law<br>
+            Ampere’s law<br>
+            Curl<br>
+            Faraday’s law<br>
+            Lorentz force<br>
+            Inductance<br>
+            Magnetomotive force<br>
+            Reluctance<br>
+            Magnetic circuits<br>
+            Self and Mutual inductance of simple configurations
+        </td>
+    </tr>
+    <tr>
+        <td>Electrical Circuits and Machines</td>
+        <td>
+            Voltage and current sources: independent, dependent, ideal and practical; v-i relationships of resistor, inductor, mutual inductance and capacitor; transient analysis of RLC circuits with dc excitation. Kirchoff’s laws, mesh and nodal analysis, superposition, Thevenin, Norton, maximum power transfer and reciprocity theorems. Peak-, average- and rms values of ac quantities; apparent-, active- and reactive powers; phasor analysis, impedance and admittance; series and parallel resonance, locus diagrams, realization of basic filters with R, L and C elements. transient analysis of RLC circuits with ac excitation. One-port and two-port networks, driving point impedance and admittance, open-, and short circuit parameters. Single-phase transformer: equivalent circuit, phasor diagram, open circuit and short circuit tests, regulation and efficiency; Three-phase induction motors: principle of operation, types, performance, torque-speed characteristics, no-load and blocked rotor tests, equivalent circuit, starting and speed control; Types of losses and efficiency calculations of electric machines
+        </td>
+    </tr>
+    <tr>
+        <td>Signals and Systems</td>
+        <td>
+            Periodic, aperiodic and impulse signals; Laplace, Fourier and z-transforms; transfer function, frequency response of first and second-order linear time-invariant systems, impulse response of systems; convolution, correlation. Discrete-time system: impulse response, frequency response, pulse transfer function; DFT and FFT; basics of IIR and FIR filters.
+        </td>
+    </tr>
+    <tr>
+        <td>Control Systems</td>
+        <td>
+            Feedback principles, signal flow graphs, transient response, steady-state-errors, Bode plot, phase and gain margins, Routh and Nyquist criteria, root loci, design of lead, lag and lead-lag compensators, state-space representation of systems; time-delay systems; mechanical, hydraulic and pneumatic system components, synchro pair, servo and stepper motors, servo valves; on-off, P, PI, PID, cascade, feedforward, and ratio controllers, tuning of PID controllers and sizing of control valves.
+        </td>
+    </tr>
+    <tr>
+        <td>Analog Electronics</td>
+        <td>
+            Characteristics and applications of diode, Zener diode, BJT and MOSFET; small-signal analysis of transistor circuits, feedback amplifiers. Characteristics of ideal and practical operational amplifiers; applications: adder, subtractor, integrator, differentiator, difference amplifier, instrumentation amplifier, precision rectifier, active filters, oscillators, signal generators, voltage-controlled oscillators and phase-locked loop, sources and effects of noise and interference in electronic circuits.
+        </td>
+    </tr>
+    <tr>
+        <td>Digital Electronics</td>
+        <td>
+            Combinational logic circuits, minimization of Boolean functions. IC families: TTL and CMOS. Arithmetic circuits, comparators, Schmitt trigger, multi-vibrators, sequential circuits, flipflops, shift registers, timers and counters; sample-and-hold circuit, multiplexer, analog-to-digital (successive approximation, integrating, flash and sigma-delta) and digital-to-analog converters (weighted R, R-2R ladder and current steering logic). Characteristics of ADC and DAC (resolution, quantization, significant bits, conversion/settling time); basics of number systems, Embedded Systems: Microprocessor and microcontroller applications, memory and input-output interfacing; basics of data acquisition systems, basics of distributed control systems (DCS) and programmable logic controllers (PLC).
+        </td>
+    </tr>
+    <tr>
+        <td>Measurements</td>
+        <td>
+            SI units, standards (R,L,C, voltage, current and frequency), systematic and random errors in measurement, expression of uncertainty – accuracy and precision, propagation of errors, linear and weighted regression. Bridges: Wheatstone, Kelvin, Megohm, Maxwell, Anderson, Schering and Wien for measurement of R, L, Cand frequency, Q-meter. Measurement of voltage, current and power in single and three phase circuits; ac and dc current probes; true rms meters, voltage and current scaling, instrument transformers, timer/counter, time, phase and frequency measurements, digital voltmeter, digital multimeter; oscilloscope, shielding and grounding.
+        </td>
+    </tr>
+    <tr>
+        <td>Sensors and Industrial Instrumentation</td>
+        <td>
+            Resistive-, capacitive-, inductive-, piezoelectric-, Hall effect sensors and associated signal conditioning circuits; transducers for industrial instrumentation: displacement (linear and angular), velocity, acceleration, force, torque, vibration, shock, pressure (including low pressure), flow (variable head, variable area, electromagnetic, ultrasonic, turbine and open channel flow meters) temperature (thermocouple, bolometer, RTD (3/4 wire), thermistor, pyrometer and semiconductor); liquid level, pH, conductivity and viscosity measurement. 4-20 mA two-wire transmitter.
+        </td>
+    </tr>
+    <tr>
+        <td>Communication and Optical Instrumentation</td>
+        <td>
+            Amplitude- and frequency modulation and demodulation; Shannon’s sampling theorem, pulse code modulation; frequency and time division multiplexing, amplitude-, phase-, frequency-, quadrature amplitude, pulse shift keying for digital modulation; optical sources and detectors: LED, laser, photo-diode, light-dependent resistor, square-law detectors, and their characteristics; interferometer: applications in metrology; basics of fiber optic sensing. UV-VIS Spectrophotometers, Mass spectrometer.
+        </td>
+    </tr>
+</table>
+</section>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+             <h1>IE Syllabus subject wise weightage analysis</h1>
+   </div>
+</div>
+</div>
+</section>
+ <table border="1">
+  <thead>
+    <tr>
+      <th>S.No.</th>
+      <th>Subject</th>
+      <th>2023</th>
+      <th>2022</th>
+      <th>2021</th>
+      <th>2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Digital Electronics</td>
+      <td>7</td>
+      <td>5</td>
+      <td>8</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Signals & Systems</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Electrical Circuits</td>
+      <td>7</td>
+      <td>5</td>
+      <td>0</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Control Systems</td>
+      <td>7</td>
+      <td>5</td>
+      <td>5</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Sensor & Industrial Instrumentation</td>
+      <td>2</td>
+      <td>7</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Measurements</td>
+      <td>6</td>
+      <td>6</td>
+      <td>6</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Communication Systems</td>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Analog Electronics</td>
+      <td>6</td>
+      <td>6</td>
+      <td>3</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>Optical Instrumentation</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>Process Control Instrumentation</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>Electricity and Magnetism</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>Electric Machine</td>
+      <td>2</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>Engineering Mathematics</td>
+      <td>9</td>
+      <td>8</td>
+      <td>7</td>
+      <td>11</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>General Aptitude</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Total Qs</td>
+      <td></td>
+      <td>65</td>
+      <td>65</td>
+      <td>65</td>
+      <td>65</td>
+    </tr>
+  </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+             <h1>GATE Instrumentation Subject wise Weightage of Core Subjects</h1>
+   </div>
+</div>
+</div>
+</section>
+<table border="1">
+  <thead>
+    <tr>
+      <th rowspan="2">GATE Instrumentation Engineering Subjects</th>
+      <th colspan="6">GATE Year</th>
+    </tr>
+    <tr>
+      <th>GATE 2015</th>
+      <th>GATE 2016</th>
+      <th>GATE 2017</th>
+      <th>GATE 2018</th>
+      <th>GATE 2019</th>
+      <th>GATE 2020</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Analog Electronics</td>
+      <td>13</td>
+      <td>10</td>
+      <td>13</td>
+      <td>12</td>
+      <td>11</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Communication</td>
+      <td>3</td>
+      <td>6</td>
+      <td>4</td>
+      <td>1</td>
+      <td>5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Control Systems</td>
+      <td>8</td>
+      <td>9</td>
+      <td>8</td>
+      <td>8</td>
+      <td>14</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <td>Digital Circuits</td>
+      <td>9</td>
+      <td>12</td>
+      <td>4</td>
+      <td>9</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Engineering Mathematics</td>
+      <td>8</td>
+      <td>14</td>
+      <td>10</td>
+      <td>14</td>
+      <td>10</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>General Aptitude</td>
+      <td>15</td>
+      <td>15</td>
+      <td>15</td>
+      <td>15</td>
+      <td>15</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Measurements</td>
+      <td>6</td>
+      <td>8</td>
+      <td>10</td>
+      <td>10</td>
+      <td>5</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <td>Network Theory</td>
+      <td>11</td>
+      <td>9</td>
+      <td>11</td>
+      <td>9</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Optical Instrumentation</td>
+      <td>10</td>
+      <td>4</td>
+      <td>2</td>
+      <td>6</td>
+      <td>7</td>
+      <td>4</td>
+    </tr>
+    <tr>
+      <td>Process Control</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>Signals and Systems</td>
+      <td>7</td>
+      <td>6</td>
+      <td>11</td>
+      <td>8</td>
+      <td>8</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Transducers</td>
+      <td>10</td>
+      <td>7</td>
+      <td>10</td>
+      <td>8</td>
+      <td>9</td>
+      <td>8</td>
+    </tr>
+  </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+             <h1>GATE Instrumentation Subject wise Weightage of General Aptitude and Engineering Mathematics </h1>
+   </div>
+</div>
+</div>
+</section>
+<table border="1">
+  <thead>
+    <tr>
+      <th>GATE Instrumentation Engineering Subjects</th>
+      <th>Weightage in percent</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>General Aptitude (GA)</td>
+      <td>15%</td>
+    </tr>
+    <tr>
+      <td>Engineering Mathematics</td>
+      <td>13%</td>
+    </tr>
+    <tr>
+      <td>Instrumentation Engineering</td>
+      <td>72%</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>100 %</td>
+    </tr>
+  </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox" style="display: flex; align-items: center;">
+        <img src=https://img.freepik.com/premium-vector/contemporary-tips-design-vector_778550-2100.jpg alt="Welcome" class="left-image">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                <h2>Tips and Tricks for Cracking GATE Instrumentation Engineering Exam</h2>
+            </div>
+</head>
+<body>
+
+<p>Cracking the GATE 2024 Instrumentation Engineering Exam requires a lot of hard work, dedication, and preparation. Here are some tips and tricks that can help you crack the exam with ease.</p>
+<p><strong>1. Understand the Exam Pattern:</strong> The first step towards cracking any exam is to understand its pattern thoroughly. Knowing the number of questions, marks allotted, and negative marking scheme can help you plan your preparation strategy accordingly.</p>
+<p><strong>2. Plan Your Preparation Strategy:</strong> Once you have understood the exam pattern, plan your preparation strategy accordingly. Divide your time equally between all subjects and allot more time to the ones that you find difficult.</p>
+<p><strong>3. Practice Makes Perfect:</strong> Practice as many previous year question papers as possible to get the hang of the type of questions asked in the exam. Solving mock tests can also help you evaluate your performance and identify areas that need improvement.</p>
+<p><strong>4. Focus on Basics:</strong> Revise all concepts and formulas thoroughly before starting with advanced topics. Make sure that your basics are clear for all subjects.</p>
+<p><strong>5. Time Management:</strong> Time management is crucial when it comes to cracking any competitive exam. Make sure that you manage your time effectively during the exam by dividing it wisely between all sections.</p>
+</body>
+     </div>
+    </div>
+</section>
+</html>

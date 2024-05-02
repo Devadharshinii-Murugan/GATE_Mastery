@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                 <li><a href="#eligibility">Eligibility</a></li>
+                <li><a href="file:///C:/Users/murug/Documents/PYQ'2024.html">PYQ's</a></li>
+               <li><a href="#topic-weightage">Weightage</a></li>
+                <li><a href="file:///C:/Users/murug/Documents/try.html">Online courses</a></li>
+                <li><a href="file:///C:/Users/murug/Documents/checkthecss.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to GATE Mastery</h1>
+            <p>About Graduate Aptitude Test in Engineering (GATE)</p>
+        </div>
+    </section>
+</div>
+<section id="content" class="content">
+ <div class="content-wrapper" id="contentBox">
+        <div class="text">
+            <div class="boxed">
+                <h2>GATE Preparation | Explore Free Tips & Strategies for Success</h2>
+            </div>
+            <h3>Welcome to GATE Preparation, your go-to hub for conquering competitive exams! Dive into invaluable free tips, past question papers, and time-management techniques to ace your exams. Explore daily learning and analysis tools, attend quizzes, and download study materials effortlessly. With our user-friendly interface and unwavering support, mastering your exams has never been more accessible. Join us now and embark on your journey to academic excellence with confidence and proficiency!</h3>
+        </div>
+        <img src="https://www.quotemaster.org/images/b6/b62936fbe6136d0b135ba8dffa1cc5ae.jpg" alt="Welcome" class="right-image">
+    </div>
+</section>
+  <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox" style="display: flex; align-items: center;">
+        <img src=https://th.bing.com/th/id/OIP.oiTkKwji_Y0OjSN0wVzz6wHaEP?w=307&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7 alt="Are you ready" class="left-image">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                <h2>Here we go...</h2>
+            </div>
+            <h2>What is GATE?</h2>
+            <h3>The Graduate Aptitude Test in Engineering (GATE) is a national-level examination conducted to assess the understanding of various engineering and science subjects among undergraduate students and graduates. It serves as a gateway for admission to postgraduate programs in prestigious institutions and for recruitment in public sector companies. GATE scores are also used for fellowship programs offered by government agencies and for opportunities in research and development.</h3>
+        </div>
+    </div>
+</section>
+
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox" style="display: flex; align-items: center;">
+        <img src="C:\Users\murug\Pictures\Screenshots\Screenshot 2024-04-20 192757.png" alt="Welcome" class="right-image">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                <h2>GATE exam is for</h2>
+            </div>
+            <h3>With the GATE exam score, you can get admission to Master of Engineering (M.E.)/Master of Technology (M.Tech) courses and Ph.D. Programs at various IITs, NITs, IISc, GFTIs, and other reputed Universities. Moreover, scores obtained in the GATE exam are also considered by several foreign universities for admission, such as the Nanyang Technological University (Singapore), National University of Singapore (Singapore), Technical University of Munich (Germany), and Aachen University (Germany), etc. GATE score can also be used to apply for jobs in PSUs, Central Government, and GOI Organizations, as well as in Private institutions. The GATE exam score can be used to get various fellowships such as GATE JRF by CSIR.</h3>
+        </div>
+    </div>
+</section>
+
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox" style="display: flex; align-items: center;">
+        <img src="C:\Users\murug\Downloads\Stack of Books Author Writer Logo.png" alt="Welcome" class="left-image">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                <h2>Who will Conduct GATE</h2>
+            </div>
+            <h3>The GATE 2024 session will be conducted by IISc Bangalore.
+
+            Note: GATE score remains valid for 3 years for joining an M.Tech. program from the date of release of the result. For government jobs, GATE Score will remain valid for 1 year only. Detailed descriptions of opportunities are provided here: "Opportunities After GATE Exam."</h3>
+        </div>
+    </div>
+</section>
+
+
+ <section id="content" class="content">
+         <div class="content-wrapper" id="contentBox">
+        <img src="https://www.futuremobility.com/wp-content/uploads/2019/06/Dealer-Application-Form.jpg" alt="Welcome" class="right-image">
+        <div class="text">
+            <div class="text" style="text-align: justify;">
+        <div class="boxed">
+   <h2>How to Fill GATE Application Form</h2>
+</div>
+  
+        <h3>1) Visit GOAPS's official site and register.</h3>
+        <h3>2) Once registration is completed, candidates need to visit the GATE Login corner.</h3>
+        <h3>3) Fill up the application form.</h3>
+        <h3>4) Upload the required documents, like photographs, signatures, etc.</h3>                                             
+        <h3>5) Make the payment of exam fees as per the categorical requirements.</h3>
+        <h3>6) Click on the submit button.</h3>
+
+</div>
+</div>
+</section>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+         <img src="https://th.bing.com/th/id/OIP.UrWi61NOzcLR5v24fhnl3QHaEK?w=311&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Welcome" class="left-image">
+        <div class="text">
+            <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                <div class="container">
+                    <div class="surrounding-boxes">
+                        <div class="surrounding-box left">
+                            <strong>STEP 1: Registration:</strong> Candidates register through the GATE online application system (GOAPS) using provided details.
+                        </div>
+                        <div class="surrounding-box top">
+                            <strong>STEP 2: Login and Form Fill-up:</strong> Access the GATE portal, fill out the form with personal and academic details, select preferred exam cities and papers.
+                        </div>
+                        <div class="surrounding-box">
+                            <strong>STEP 3: Upload Scanned Images:</strong> Upload scanned photo, signature, and required documents.
+                        </div>
+                        <div class="surrounding-box bottom">
+                            <strong>STEP 4: Preview Form:</strong> Review and verify all entered details.
+                        </div>
+                        <div class="surrounding-box right">
+                            <strong>STEP 5: Payment:</strong> Pay application fees online via net banking/debit card/credit card, varying by category.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="content" class="content">
+<div class="rectangle-box">
+ <div class="content-wrapper" id="contentBox">
+        <div class="text">
+   
+            <div class="boxed">
+ <h1 id="eligibility">Eligibility Criteria for GATE 2025</h1>
+</div>
+</div>
+</section>
+<table>
+  <tr>
+    <th>Criteria</th>
+    <th>Eligibility</th>
+  </tr>
+  <tr>
+    <td>Nationality</td>
+    <td>
+      <p>Indian nationality students will be eligible.</p>
+      <p>                      International candidates belonging to Nepal, Bangladesh, Sri Lanka, Singapore, Ethiopia, and United Arab Emirates (UAE) will also be eligible.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>Education Qualification</td>
+    <td>
+      <p>                                        A candidate who is currently studying in the 3rd or higher years of any undergraduate degree program OR has already completed any government-approved degree program in Engineering / Technology / Architecture / Science / Commerce / Arts.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>GATE Exam Age Limit</td>
+    <td>There is no age limit.</td>
+  </tr>
+</table>
+</section>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text">
+            <div class="text" style="text-align: justify;">
+            <div class="boxed">
+    <h1>GATE Eligibility Criteria 2025 and detailed Academic Qualification</h1>
+</div>
+
+</div>
+</div>
+</section>
+    <table>
+        <tr>
+            <th>Qualifying Degree</th>
+            <th>Qualifying Degree/ Examination</th>
+            <th>Description of eligible candidates</th>
+            <th>Expected Year of Completion</th>
+        </tr>
+        <tr>
+            <td>B.E./B.Tech/B.Pharm. Students</td>
+            <td>Bachelor’s degree in Engineering / Technology (4 years after 10+2 or 3 years after B.Sc. / Diploma in Engineering / Technology)</td>
+            <td>Currently in the 3rd year or higher grade or already completed.</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>B.Arch Students</td>
+            <td>Bachelor’s degree of Architecture (5-year course) / Naval Architecture (4-year course) / Planning (4- year course)</td>
+            <td>Currently in the 3rd year or higher grade or already completed.</td>
+            <td>2025 (for the 5-year program) 2024 (for the 4-year program)</td>
+        </tr>
+        <tr>
+            <td>B.Sc. (Research) Students</td>
+            <td>Bachelor’s degree in Science (Post-Diploma/4 years after 10+2)</td>
+            <td>Currently in the 3rd year or higher grade or already completed.</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>Pharm. D. (after 10+2)</td>
+            <td>6 years degree program, consisting of internship or residency training, during third year onwards</td>
+            <td>Currently in the 3rd /4th / 5th / 6th year or already completed</td>
+            <td>2026</td>
+        </tr>
+        <tr>
+            <td>M.B.B.S.</td>
+            <td>Degree holders of M.B.B.S. and those who are in the 5th / 6th / 7th semester or higher semester of such program</td>
+            <td>5th, 6th, 7th, or higher semester or already completed.</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>M.Sc., MA, MCA or Equivalent</td>
+            <td>Master’s degree in any branch of Arts/Science/Mathematics/Statistics/ Computer Applications or equivalent</td>
+            <td>Currently in the first year or higher or already Completed</td>
+            <td>2024</td>
+        </tr>
+        <tr>
+            <td>Integrated M.E./M.Tech (Post B.Sc.)</td>
+            <td>Post-B.Sc Integrated Master’s degree programs in Engineering/ Technology (4-year program)</td>
+            <td>Currently in the 1st / 2nd /3rd /4th year or already completed</td>
+            <td>2026</td>
+        </tr>
+        <tr>
+            <td>Int. M.E./M.Tech. or Dual Degree (after Diploma or 10+2)</td>
+            <td>Integrated Master’s degree program or Dual Degree program in Engineering/Technology (5-year program)</td>
+            <td>Currently in the 3rd /4th / 5th year or already completed</td>
+            <td>2025</td>
+        </tr>
+        <tr>
+            <td>B.Sc. / B.A. / B.Com.</td>
+            <td>Bachelor degree in any branch of Science / Arts / Commerce (3 years program)</td>
+            <td>Currently in the 3rd year or higher or already completed</td>
+            <td>2022</td>
+        </tr>
+        <tr>
+            <td>Integrated M.Sc, Integrated B.S./M.S.</td>
+            <td>Integrated M.Sc. or 5-year integrated B.S.-M.S. program</td>
+            <td>Currently in the 3rd year or higher or already completed</td>
+            <td>2025</td>
+        </tr>
+        <tr>
+            <td>Degree from Professional Society Examination (equivalent to B.E/B.Tech/B.Arch)</td>
+            <td>B.E./B.Tech./B.Arch. equivalent examinations of Professional Societies, recognized by MoE/UPSC/AICTE</td>
+            <td>Completed Section A or equivalent of such professional courses</td>
+            <td>NA</td>
+        </tr>
+    </table>
+     <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text">
+            <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                <h1>GATE 2025 Exam Dates</h1>
+            </div>
+               
+        </div>
+    </div>
+</section>
+    
+<table>
+ <tr style="text-align: center;">
+  <th>Event</th>
+  <th>Tentative Dates</th>
+</tr>
+
+  <tr>
+    <td>GATE 2025 Application Form</td>
+    <td>August 31, 2024</td>
+  </tr>
+  <tr>
+    <td>GATE 2025 Application Form Last Date (without late fee)</td>
+    <td>October 13, 2024</td>
+  </tr>
+  <tr>
+    <td>Last Day to Fill GATE 2025 Application Form (with additional fee)</td>
+    <td>October 20, 2024</td>
+  </tr>
+  <tr>
+    <td>GATE 2025 Application Form Correction</td>
+    <td>November 7 to 11, 2024</td>
+  </tr>
+  <tr>
+    <td>GATE 2025 Admit Card Date</td>
+    <td>January 4, 2025</td>
+  </tr>
+  <tr>
+    <td>GATE 2025 Exam Date</td>
+    <td>February 1, 2, 8 and 9, 2025</td>
+  </tr>
+  <tr>
+    <td>Availability of GATE 2025 Response Sheet</td>
+    <td>February 16, 2025</td>
+  </tr>
+  <tr>
+    <td>Release of Provisional GATE 2025 Answer Key</td>
+    <td>February 21, 2025</td>
+  </tr>
+  <tr>
+    <td>Raise Objection against Provisional GATE Answer Key</td>
+    <td>February 22 to 25, 2025</td>
+  </tr>
+  <tr>
+    <td>Release of Final GATE 2025 Answer Key</td>
+    <td>March 15, 2025</td>
+  </tr>
+  <tr>
+    <td>GATE 2025 Result Date</td>
+    <td>March 16, 2025</td>
+  </tr>
+</table>
+
+    <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text">
+            <div class="text" style="text-align: justify;">
+            <div class="boxed">
+    <h1>GATE 2024 Application Fees</h1>
+</div>
+</div>
+</div>
+</section>
+    <table>
+        <tr>
+            <th>Category</th>
+            <th>Regular Period<br>(30th Aug to 12th Oct 2023)</th>
+            <th>During the Extended Period<br>(13th Oct to 20th Oct 2023)</th>
+        </tr>
+        <tr>
+            <td>Female/SC/ST/PwD* candidates<br>(per test paper)</td>
+            <td>₹ 900</td>
+            <td>₹ 1400</td>
+        </tr>
+        <tr>
+            <td>All other candidates including foreign nationals<br>(per test paper)</td>
+            <td>₹ 1800</td>
+            <td>₹ 2300</td>
+        </tr>
+    </table>
+</div>
+</div>
+</section>
+ <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <img src="https://images.collegedunia.com/public/image/How_many_students_appeared_for_GATE__0c3f7adbd14c5f258d42dee21e793a49.png?tr=w-900,h-514,c-force" alt="Welcome" class="right-image"> 
+            <div class="text" style="text-align: justify;">
+            <div class="boxed">
+    <h1>How many Students are appeared for GATE?</h1>
+</div>
+<h3>Farjana Basir
+
+Content Writer | Updated On - Mar 24, 2024<br></br>
+
+GATE 2024 result has been declared on March 16, 2024. The statistics on the number of qualified aspirants as per GATE 2024 result has also been released. 8,26,239 candidates registered for GATE 2024, 6,53,292 appeared while only 1.29 lakh candidates have qualified the exam. Compared to the previous year, 25% more applications were received this year.</h3>
+ </div>
+</div>
+</section>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text">
+            <div class="text" style="text-align: justify;">
+            <div class="boxed">
+        <h1>GATE Eligibility Criteria 2025 for International Candidates</h1>
+    </div>
+</div>
+</div>
+</div>
+</section>
+  <table>
+    <tr>
+        <th>Specification</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+        <td>Nationality</td>
+        <td>
+            <p>Candidates with the Nationality of Bangladesh, Ethiopia, Nepal, Singapore, Sri Lanka, and the United Arab Emirates can seek admission through GATE 2024.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Courses</td>
+        <td>
+            <p>Through GATE 2025, candidates can opt for MTech and Ph.D. programs offered by IISc and IITs.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Academic Qualification</td>
+        <td>
+            <p>For admission, candidates must qualify a Bachelor’s Degree in the stream of Engineering or a Master’s Degree in a similar field.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Age Criteria</td>
+        <td>
+            <p>From any age, applicants are eligible to apply for GATE 2024.</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Duration of the Program</td>
+        <td>
+            <p>To meet the criteria of GATE Eligibility 2024, candidates need to complete their courses with a duration of 3 years.</p>
+        </td>
+    </tr>
+</table>
+    <div class="content">
+        <div class="text" style="text-align: justify;">
+        <div class="boxed">
+        <h2 id="topic-weightage">Topic Wise Weightage</h2>
+        </div>
+           <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text">
+            <div class="boxed">
+        <h1>Will There be Any Changes Made in the GATE 2025 Syllabus?</h1>
+    </div>
+        <p>Generally, the GATE Syllabus remains the same every year. If any changes are to be made in the syllabus, the authorities inform students in advance. Here are some recent changes:</p>
+            <p>1) In GATE 2024, IISc, Bangalore introduced a new paper on Data Science and AI Engineering.</p>
+            <p>2) In 2022, subjects such as ES (Environmental Science and Engineering) and XH (Humanities and Social Sciences) were added to the GATE syllabus.</p>
+            <p>3) In 2021, NM (Naval Architecture and Marine Engineering) and GE (Geomatics Engineering) were added to the syllabus.</p>
+        <p>It's essential for students to stay updated with any changes in the syllabus announced by the authorities.</p>
+</div>
+</div>
+</section>
+     
+   <div class="container">
+        <div class="row">
+            <div class="circle-container">
+                <div class="circle" data-link="file:///C:/Users/murug/Documents/logintoapt.html">
+                    <img src="https://eunraquintan.weebly.com/uploads/2/6/2/1/26212826/logical_orig.png" alt="Circle Image">
+                </div>
+                <p>Aptitude</p>
+            </div>
+        <div class="circle-container">
+            <div id="cse-circle" class="circle" data-link="file:///C:/Users/murug/Documents/logintocse.html">
+                <img src="https://th.bing.com/th/id/OIP.MyS6iRl_0SSTBBuv-rwqsQHaEo?rs=1&pid=ImgDetMain" alt="Circle Image">
+            </div>
+            <p>CSE Syllabus</p>
+        </div>
+        <div class="circle-container">
+            <div id="cse-circle" class="circle" data-link="file:///C:/Users/murug/Documents/logintoie.html">
+                <img src="https://th.bing.com/th/id/OIP.GXqDBg4McIGnh-3m2t3-gwHaDR?rs=1&pid=ImgDetMain" alt="Circle Image">
+            </div>
+            <p>Instrumental Engineering Syllabus</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="circle-container">
+            <div class="circle" data-link="file:///C:/Users/murug/Documents/logintosyallabus.html">
+                <img src="https://th.bing.com/th/id/OIP.0GgvIBZFT_2nNoak1Q9LdAHaE7?w=270&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Circle Image">
+            </div>
+            <p>Mechanical Syllabus</p>
+        </div>
+        <div class="circle-container">
+            <div id="ec-circle" class="circle" data-link="file:///C:/Users/murug/Documents/logintoece.html">
+                <img src="https://th.bing.com/th/id/OIP.4ofnGSm7sPbyKsU0aRjjLwHaDe?w=278&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="Circle Image">
+            </div>
+            <p>ECE Syllabus</p>
+        </div>
+        <div class="circle-container">
+            <div id="ec-circle" class="circle" data-link="file:///C:/Users/murug/Documents/logintoee.html">
+                <img src="https://wallpapercave.com/wp/wp3027404.jpg" alt="Circle Image">
+            </div>
+            <p>Electrical Syllabus</p>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; 2024 CAT & GATE Mastery. All rights reserved.
+</footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    for (const link of links) {
+        link.addEventListener("click", clickHandler);
+    }
+    
+    function clickHandler(e) {
+        e.preventDefault();
+        const href = this.getAttribute("href");
+        const offsetTop = document.querySelector(href).offsetTop;
+    
+        scroll({
+            top: offsetTop,
+            behavior: "smooth"
+        });
+    }
+});
+</script>
+     <script>
+        // Get a reference to the "Home" navigation bar item
+        const homeNavItem = document.querySelector('nav ul.menu li:first-child a');
+
+        // Add a click event listener to the "Home" navigation bar item
+        homeNavItem.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default behavior of the link
+
+            // Scroll smoothly to the content section
+            document.querySelector('#content').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    
+        document.getElementById("contentBox").addEventListener("click", function() {
+    this.classList.toggle("active");
+});
+
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const circles = document.querySelectorAll('.circle');
+
+    circles.forEach(circle => {
+        circle.addEventListener('click', function () {
+            const link = this.getAttribute('data-link');
+            if (link) {
+                window.open(link, '_blank');
+            }
+        });
+    });
+});
+</script>
+<script>
+// JavaScript to handle scrolling
+window.addEventListener('scroll', function() {
+    var navbar = document.getElementById('navbar');
+    if (window.scrollY > 0) {
+        navbar.classList.add('navbar-scrolled');
+    } else {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+</script>
+    <script src="script.js"></script>
+    <script>
+    // Function to validate the form
+    function validateForm() {
+        var name = document.forms["contactForm"]["Name"].value;
+        var email = document.forms["contactForm"]["Email"].value;
+        var message = document.forms["contactForm"]["Message"].value;
+        
+        // Check if name, email, and message are not empty
+        if (name == "" || email == "" || message == "") {
+            alert("Please fill in all fields");
+            return false;
+        }
+        
+        // Check if email is in a valid format using a simple regular expression
+        var emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if (!email.match(emailFormat)) {
+            alert("Please enter a valid email address");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

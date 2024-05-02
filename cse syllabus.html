@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+.button-wrapper {
+    text-align: center; /* Align the button center */
+}
+
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.download-link:hover {
+    background-color: #45a049;
+}
+
+.text {
+    margin-left: 20px;
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+     .content {
+    text-align: center; /* Center the content */
+}
+
+.content-wrapper {
+    display: inline-block; /* Make the content wrapper inline-block */
+}
+
+.text {
+    text-align: right; /* Align the text to the right */
+    margin-top: 20px; /* Add margin to the top for spacing */
+}
+
+.download-section {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Add margin to create space between content and button */
+}
+
+.download-link {
+    display: inline-block; /* Display the button as inline-block to center it */
+    margin-top: 10px; /* Add margin to the top for spacing */
+}
+
+
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="pdf">Syllabus PDF</a></li>
+                   <li><a href="#General" onclick="scrollToContent()">CSE Syllabus</a></li>
+                <li><a href="#EngineeringMathematics" onclick="scrollToMath()">For Engineering Mathematics</a></li>
+               <li><a href="#core">For Core</a></li>
+                <li><a href="#weightage" onclick="scrollToContent()">Weightage</a></li>
+                <li><a href="#tipsandtricks">Tips & Tricks</a></li>
+                <li><a href="#pattern">CSE Pattern</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <br></br>
+         <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+           <h2 id="General">GATE CSE Syllabus 2025</h1>
+       </div>
+         <br></br>
+         <h3>The GATE CSE Syllabus 2025 (Computer Science Engineering) comprises General Aptitude, Engineering Mathematics, and Core Subjects from Computer Science Engineering, as outlined below for applicants ease of understanding.</h3>
+     </br></br>
+ </div>
+</div>
+</section>
+        <table>
+            <tr>
+                <th>Topics</th>
+                <th>Sub-Topics</th>
+            </tr>
+            <tr>
+                <td><p>Discrete Mathematics</p></td>
+                <td>
+                    <p>Propositional and first order logic.</p>
+                    <p>Sets, relations, functions, partial orders and lattices.</p>
+                    <p>Monoids, Groups.</p>
+                    <p>Graphs: connectivity, matching, coloring.</p>
+                    <p>Combinatorics: counting, recurrence relations, generating functions</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Digital Logic</p></td>
+                <td>
+                    <p>Boolean algebra.</p>
+                    <p>Combinational and sequential circuits.</p>
+                    <p>Minimization.</p>
+                    <p>Number representations and computer arithmetic (fixed and floating-point)</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Computer Organization and Architecture</p></td>
+                <td>
+                    <p>Machine instructions and addressing modes.</p>
+                    <p>ALU, data‐path and control unit.</p>
+                    <p>Instruction pipelining, pipeline hazards.</p> 
+                    <p>Memory hierarchy: cache, main memory and secondary storage; I/O interface (interrupt and DMA mode)</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Programming and Data Structures</p></td>
+                <td>
+                    <p>Programming in C.</p>
+                    <p>Recursion.</p>
+                    <p>Arrays, stacks, queues, linked lists, trees, binary search trees, binary heaps, graphs</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Algorithms</p></td>
+                <td>
+                    <p>Searching, sorting, hashing.</p>
+                    <p>Asymptotic worst-case time and space complexity.</p>
+                    <p>Algorithm design techniques: greedy, dynamic programming and divide‐and‐conquer.</p>
+                    <p>Graph traversals, minimum spanning trees, shortest paths</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Theory of Computation</p></td>
+                <td>
+                    <p>Regular expressions and finite automata.</p>
+                    <p>Context-free grammars and push-down automata.</p>
+                    <p>Regular and context-free languages, pumping lemma.</p>
+                    <p>Turing machines and undecidability.</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Compiler Design</p></td>
+                <td>
+                    <p>Lexical analysis, parsing, syntax-directed translation.</p>
+                    <p>Runtime environments.</p>
+                    <p>Intermediate code generation.</p>
+                    <p>Local optimization, Data flow analyses: constant propagation, liveness analysis, common subexpression elimination</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Operating System</p></td>
+                <td>
+                    <p>System calls, processes, threads, inter‐process communication, concurrency and synchronization.</p>
+                    <p>Deadlock.</p>
+                    <p>CPU and I/O scheduling.</p>
+                    <p>Memory management and virtual memory.</p>
+                    <p>File systems</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Databases</p></td>
+                <td>
+                    <p>ER‐model.</p>
+                    <p>Relational model: relational algebra, tuple calculus, SQL.</p>
+                    <p>Integrity constraints, normal forms.</p>
+                    <p>File organization, indexing (e.g., B and B+ trees).</p>
+                    <p>Transactions and concurrency control</p>
+                </td>
+            </tr>
+            <tr>
+                <td><p>Computer Networks</p></td>
+                <td>
+                    <p>Concept of layering: OSI and TCP/IP Protocol Stacks;</p>
+                    <p>Basics of packet, circuit and virtual circuit-switching;</p>
+                    <p>Data link layer: framing, error detection, Medium Access Control, Ethernet bridging;</p>
+                    <p>Routing protocols: shortest path, flooding, distance vector and link-state routing;</p>
+                    <p>Fragmentation and IP addressing, IPv4, CIDR notation, Basics of IP support protocols (ARP, DHCP, ICMP), Network Address Translation (NAT);</p>
+                    <p>Transport layer: flow control and congestion control, UDP, TCP, sockets;</p>
+                    <p>Application layer protocols: DNS, SMTP, HTTP, FTP, Email</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+     <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+        <h1>GATE CSE Syllabus 2025 - General Aptitude</h1>
+    </div>
+</div>
+</div>
+</section>
+        <table>
+            <tr>
+                <th>Topics</th>
+                <th>Sub-topics</th>
+            </tr>
+            <tr>
+                <td>Verbal Aptitude</td>
+                <td>
+                    <p>English grammar</p>
+                    <p>Vocabularies</p>
+                    <p>Reading and comprehension</p>
+                    <p>Narrative sequencing</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Quantitative Aptitude</td>
+                <td>
+                    <p>Data interpretation</p>
+                    <p>2 & 3-dimensional plots</p>
+                    <p>Maps & tables</p>
+                    <p>Numerical computation & estimation that includes ratios, percentages, powers, exponents & logarithms</p>
+                    <p>Permutations & combinations</p>
+                    <p>Mensuration & geometry</p>
+                    <p>Elementary statistics & probability</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Analytical Aptitude</td>
+                <td>
+                    <p>Logic: Deduction & induction Analogy</p>
+                    <p>Numerical relations & reasoning</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Spatial Aptitude</td>
+                <td>
+                    <p>Transformation of shapes like translation, mirroring , rotation & scaling</p>
+                    <p>Assembling & grouping</p>
+                    <p>Paper folding, cutting, and patterns (2 & 3 dimensions)</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+       <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+       <h2 id="weightage">Topic Weightage 2025</h2>
+   </div>
+</div>
+</div>
+</section>
+  <table>
+    <tr>
+      <th>GATE Topic</th>
+      <th>Expected Weightage in Marks</th>
+    </tr>
+    <tr>
+      <td>Engineering Maths</td>
+      <td>14.75</td>
+    </tr>
+    <tr>
+      <td>Database</td>
+      <td>7.5</td>
+    </tr>
+    <tr>
+      <td>Theory of Computation</td>
+      <td>7.5</td>
+    </tr>
+    <tr>
+      <td>Compiler Design</td>
+      <td>2.75</td>
+    </tr>
+    <tr>
+      <td>Computer Organization & Architecture</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>Programming & Data Structures</td>
+      <td>10.5</td>
+    </tr>
+    <tr>
+      <td>Algorithms</td>
+      <td>8</td>
+    </tr>
+    <tr>
+      <td>Digital Logic</td>
+      <td>5.25</td>
+    </tr>
+    <tr>
+      <td>Operating System</td>
+      <td>9</td>
+    </tr>
+    <tr>
+      <td>General Aptitude</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Computer Networks</td>
+      <td>7.5</td>
+    </tr>
+    <tr>
+      <td>Soft. Engg/ Web Technology</td>
+      <td>1.5</td>
+    </tr>
+  </table>
+</div>
+</div>
+ <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+             <h2 id="EngineeringMathematics">CSE Engineering Mathematics</h1>
+   </div>
+</div>
+</div>
+</section>
+<table>
+    <tr>
+        <th>Subject</th>
+        <th>Syllabus</th>
+    </tr>
+    <tr>
+        <td><p>Digital Logic</p></td>
+        <td>
+            <p>Boolean algebra</p>
+            <p>Combinational and sequential circuits</p>
+            <p>Minimization</p>
+            <p>Number representations and computer arithmetic (fixed and floating-point)</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p>Computer Organization and Architecture</p></td>
+        <td>
+            <p>Machine instructions and addressing modes</p>
+            <p>ALU, data‐path and control unit</p>
+            <p>Instruction pipelining, pipeline hazards</p>
+            <p>Memory hierarchy: cache, main memory and secondary storage</p>
+            <p>I/O interface (interrupt and DMA mode)</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p>Programming and Data Structures</p></td>
+        <td>
+            <p>Programming in C</p>
+            <p>Recursion</p>
+            <p>Arrays</p>
+            <p>Stacks</p>
+            <p>Queues</p>
+            <p>Linked lists</h3>
+            <p>Trees</h3>
+            <p>Binary search trees</p>
+            <p>Binary heaps</p>
+            <p>Graphs</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p>Algorithms</p></td>
+        <td>
+            <p>Searching</p>
+            <p>Sorting</p>
+            <p>Hashing</p>
+            <p>Asymptotic worst-case time and space complexity</p>
+            <p>Algorithm design techniques: greedy, dynamic programming and divide‐and‐conquer</p>
+            <p>Graph traversals</p>
+            <p>Minimum spanning trees</p>
+            <p>Shortest paths</p>
+        </td>
+    </tr>
+    <tr>
+        <td><p>Theory of Computation</p></td>
+
+    <td>
+        <p>Regular expressions and finite automata</p>
+        <p>Context-free grammars and push-down automata</p>
+        <p>Regular and context-free languages</p>
+        <p>Pumping lemma</p>
+        <p>Turing machines and undecidability</p>
+    </td>
+</tr>
+<tr>
+    <td><p>Compiler Design</p></td>
+    <td>
+        <p>Lexical analysis</p>
+        <p>Parsing</p>
+        <p>Syntax-directed translation</p>
+        <p>Runtime environments</p>
+        <p>Intermediate code generation</p>
+        <p>Local optimization</p>
+        <p>Data flow analyses: constant propagation, liveness analysis, common subexpression elimination</p>
+    </td>
+</tr>
+
+<tr>
+    <td><p>Operating System</p></td>
+    <td>
+        <p>System calls, processes, threads</p>
+        <p>Inter‐process communication</p>
+        <p>Concurrency and synchronization</p>
+        <p>Deadlock</p>
+        <p>CPU and I/O scheduling</p>
+        <p>Memory management and virtual memory</p>
+        <p>File systems</p>
+    </td>
+</tr>
+<tr>
+    <td><p>Databases</p></td>
+    <td>
+        <p>ER‐model</p>
+        <p>Relational model: relational algebra, tuple calculus, SQL</p>
+        <p>Integrity constraints, normal forms</p>
+        <p>File organization, indexing (e.g., B and B+ trees)</p>
+        <p>Transactions and concurrency control</p>
+    </td>
+</tr>
+<tr>
+    <td><p>Computer Networks</p></td>
+    <td>
+        <p>Concept of layering: OSI and TCP/IP Protocol Stacks</p>
+        <p>Basics of packet, circuit and virtual circuit-switching</p>
+        <p>Data link layer: framing, error detection, Medium Access Control, Ethernet bridging</p>
+        <p>Routing protocols: shortest path, flooding, distance vector and link-state routing</p>
+        <p>Fragmentation and IP addressing</p>
+        <p>IPv4, CIDR notation</p>
+        <p>Basics of IP support protocols (ARP, DHCP, ICMP), Network Address Translation (NAT)</p>
+        <p>Transport layer: flow control and congestion control, UDP, TCP, sockets</p>
+        <p>Application layer protocols: DNS, SMTP, HTTP, FTP, Email</p>
+    </td>
+</tr>
+</p>
+</p>
+</td>
+</tr>
+</table>
+
+
+      <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+           <h2 id="core">GATE CSE Syllabus 2025-Core Subject</h2>
+       </div>
+</div>
+</div>
+</section>
+       <table>
+    <tr>
+        <th>Topics</th>
+        <th>Syllabus</th>
+    </tr>
+    <tr>
+        <td>Linear Algebra</td>
+        <td>
+            <p>Matrices</p>
+            <p>Determinants</p>
+            <p>System of linear equations</p>
+            <p>Eigenvalues and eigenvectors</p>
+            <p>LU decomposition</p>
+        </td>
+    </tr>
+    <tr> 
+        <td>Calculus</td>
+        <td>
+            <p>Limits</p>
+            <p>Continuity and differentiability</p>
+            <p>Maxima and minima</p>
+            <p>Mean value theorem</p>
+            <p>Integration</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Discrete Mathematics</td>
+        <td>
+            <p>Propositional and first order logic</p>
+            <p>Sets</p>
+            <p>Relations</p>
+            <p>Functions</p>
+            <p>Partial orders and lattices</p>
+            <p>Monoids</p>
+            <p>Groups</p>
+            <p>Graphs: connectivity, matching, coloring</p>
+            <p>Combinatorics: counting, recurrence relations, generating functions</p>
+        </td>
+    </tr>
+    <tr>
+        <td>Probability and Statistics</td>
+        <td>
+            <p>Random variables</p>
+            <p>Uniform Distributions</p>
+            <p>Normal Distributions</p>
+            <p>Exponential Distributions</p>
+            <p>Poisson Distributions</p>
+            <p>Binomial Distributions</p>
+            <p>Mean, median, mode and standard deviation</p>
+            <p>Conditional probability</p>
+            <p>Bayes theorem</p>
+        </td>
+    </tr>
+</table>
+    </div>
+    <br></br>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+    <h2 id="pattern">GATE CSE Exam Pattern 2025</h2>
+ </div>
+ </div>
+</div>
+</section>
+<table>
+    <tr>
+        <th>Particulars</th>
+        <th>Details</th>
+    </tr>
+    <tr>
+        <td>Mode of Exam</td>
+        <td>Online</td>
+    </tr>
+    <tr>
+        <td>Number of Questions</td>
+        <td>65</td>
+    </tr>
+    <tr>
+        <td>Duration of Exam</td>
+        <td>3 hours</td>
+    </tr>
+    <tr>
+        <td>Pattern of Questions</td>
+        <td>
+            <ul>
+                <p>Multiple Choice Questions (MCQs)</p>
+                <p>Numerical Answer Type Questions (NAT)</p>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Marking Scheme</td>
+        <td>
+            <ul>
+                <p>For MCQ’s - Test Paper carry 1 mark and 2 marks for questions with 1/3 and 2/3 negative marking for incorrect answers respectively.</p>
+                <p>For NAT – No negative marking.</p>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Number of Sections</td>
+        <td>
+            <ul>
+                <p>Section 1- General Aptitude</p>
+                <p>Section 2 – Engineering Mathematics and Core Discipline Questions.</p>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td>Topic wise weightage</td>
+        <td>
+            <ul>
+                <p>General Aptitude – 15%</p>
+                <p>Engineering Mathematics – 15%</p>
+                <p>Core Discipline Questions – 70%</p>
+            </ul>
+        </td>
+    </tr>
+</table>
+<br></br>
+            
+                <h1>GATE CSE Exam Pattern 2025</h1>
+            <br></br>
+    <div class="download-section">
+        <div class="boxed">
+            <h2 id="pdf">Download the syllabus PDF for 2025:</h3>
+
+            <a href="C:\Users\murug\Downloads\CS Computer Science and Information Technology.pdf" class="download-link">Download PDF</a>
+        </div>
+    </div>
+
+        <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox" style="display: flex; align-items: center;">
+        <img src=https://img.freepik.com/premium-vector/contemporary-tips-design-vector_778550-2100.jpg alt="Welcome" class="left-image">
+        <div class="text" style="text-align: justify;">
+            <div class="boxed">
+                        <h2 id="tipsandtricks">GATE 2024 Preparation Tips for CSE (Computer Science Engineering)</h2>
+            </div>
+</head>
+<body>
+
+<p>Students preparing for GATE CSE 2024 and looking for the answers to the question “How to prepare for GATE CSE?” will surely get their answers here. The preparation tips of GATE CSE 2024 are as mentioned below:</p>
+<p><strong>1. Start an early preparation:</strong> Students must start the preparation as early as possible to ensure that there is enough time to cover all the topics as well as revise everything.</p>
+<p><strong>2. Plan a Schedule:</strong> Make a study timetable and plan your schedule for GATE CSE 2024 exam. It must be remembered that planning is of no help until it is executed so, make sure that you stick to your timetable and schedule accordingly.</p><p><strong>3. Handy Notes:</strong> Make notes side by side while studying as it will prove to be very helpful in the later stages of preparation for revising.</p>
+<p><strong>4. Mock Tests:</strong> Practice as many mock tests as possible as it will not only give you an idea about the exam pattern of GATE CSE 2024 but also it will help you recognize the weak areas so you can work on them to score better.</p>
+<p><strong>5. Time Management:</strong> Just knowing every topic would not be enough. It is necessary to learn to implement that knowledge and be able to attempt the question paper within the stipulated time.</p>
+                    <p><strong>6. Revise:</strong> Revise and keep revising till everything is at your fingertips.</p>
+                    <p><strong>7. Syllabus:</strong> Get familiar with the syllabus to ensure that all the topics are covered and nothing is skipped from studying. Knowing the syllabus will also help in planning the schedule.</p>
+                    <p><strong>8. Stay away from distractions:</strong> Maintain an appropriate distance from everything which could act as a distraction in your preparation. There is no place for distraction in the journey of preparation toward success.</p>
+                    <p><strong>9. Don’t get nervous:</strong> Give your hundred percent while preparing but do not get stressed on the day of the exam. Stay calm and do not be nervous.</p>
+</body>
+     </div>
+    </div>
+</section>
+
+
+         <script>
+        function scrollToContent() {
+            var content = document.getElementById('content');
+            content.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function scrollToMath() {
+            var mathContent = document.getElementById('content');
+            mathContent.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+  <script>
+        function scrollToContent() {
+            var content = document.getElementById('content');
+            content.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+    <script>
+        function scrollToMath() {
+    var mathContent = document.getElementById('content');
+    mathContent.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
+</body>

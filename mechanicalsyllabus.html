@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+</style>
+</head>
+<body>
+     <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="pdf">Syllabus PDF</a></li>
+                   <li><a href="#General" onclick="scrollToContent()">ME Syllabus</a></li>
+                <li><a href="#EngineeringMathematics" onclick="scrollToMath()">For Engineering Mathematics</a></li>
+               <li><a href="#core">For Core</a></li>
+                <li><a href="#weightage" onclick="scrollToContent()">Weightage</a></li>
+                <li><a href="#tipsandtricks">Tips & Tricks</a></li>
+                <li><a href="#pattern">ME Pattern</a></li>
+            </ul>
+        </nav>
+    </header>
+    </body>
+     <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE Mechanical Engineering Syllabus 2025</h1>
+            </div>
+            <h3>The GATE Mechanical Engineering Syllabus 2025 is structured into five primary sections, each comprising several sub-topics. These sections include General Aptitude, Engineering Mathematics, Applied Mechanics and Design, Fluid Mechanics and Thermal Sciences, and Materials, Manufacturing, and Industrial Engineering.</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Topics</th>
+            <th>Sub-Topics</th>
+            <th>content</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="5">Applied Mechanics and Design</td>
+            <td>Engineering Mechanics</td>
+            <td>Free-body diagrams and equilibrium; friction and its applications including rolling friction, belt-pulley, brakes, clutches, screw jack, wedge, vehicles, etc.; trusses and frames; virtual work; kinematics and dynamics of rigid bodies in plane motion; impulse and momentum (linear and angular) and energy formulations; Lagrange’s equation</td>
+        </tr>
+        <tr>
+            <td>Mechanics of Materials</td>
+            <td>Stress and strain, elastic constants, Poisson’s ratio; Mohr’s circle for plane stress and plane strain; thin cylinders; shear force and bending moment diagrams; bending and shear stresses; concept of shear centre; deflection of beams; torsion of circular shafts; Euler’s theory of columns; energy methods; thermal stresses; strain gauges and rosettes; testing of materials with universal testing machine; testing of hardness and impact strength</td>
+        </tr>
+        <tr>
+            <td>Theory of Machines</td>
+            <td>Displacement, velocity and acceleration analysis of plane mechanisms; dynamic analysis of linkages; cams; gears and gear trains; flywheels and governors; balancing of reciprocating and rotating masses; gyroscope</td>
+        </tr>
+        <tr>
+            <td>Vibrations</td>
+            <td>Free and forced vibration of single degree of freedom systems, effect of damping; vibration isolation; resonance; critical speeds of shafts</td>
+        </tr>
+        <tr>
+            <td>Machine Design</td>
+            <td>Design for static and dynamic loading; failure theories; fatigue strength and the SN diagram; principles of the design of machine elements such as bolted, riveted and welded joints; shafts, gears, rolling and sliding contact bearings, brakes and clutches, springs</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Fluid Mechanics and Thermal Sciences</td>
+            <td>Fluid Mechanics</td>
+            <td>Fluid properties; fluid statics, forces on submerged bodies, stability of floating bodies; control-volume analysis of mass, momentum and energy; fluid acceleration; differential equations of continuity and momentum; Bernoulli’s equation; dimensional analysis; viscous flow of incompressible fluids, boundary layer, elementary turbulent flow, flow through pipes, head losses in pipes, bends and fittings; basics of compressible fluid flow</td>
+        </tr>
+        <tr>
+            <td>Heat-Transfer</td>
+             <td>Modes of heat transfer; one-dimensional heat conduction, resistance concept and electrical analogy, heat transfer through fins; unsteady heat conduction, lumped parameter system, Heisler’s charts; thermal boundary layer, dimensionless parameters in free and forced convective heat transfer, heat transfer correlations for flow over flat plates and through pipes, effect of turbulence; heat exchanger performance, LMTD and NTU methods; radiative heat transfer, Stefan-Boltzmann law, Wien’s displacement law, black and grey surfaces, view factors, radiation network analysis</td>
+        </tr>
+        <tr>
+            <td>Thermodynamics</td>
+            <td>Thermodynamic systems and processes; properties of pure substances, behavior of ideal and real gases; zeroth and first laws of thermodynamics, calculation of work and heat in various processes; second law of thermodynamics; thermodynamic property charts and tables, availability and irreversibility; thermodynamic relations</td>
+        </tr>
+        <tr>
+            <td>Applications</td>
+            <td>Power Engineering: Air and gas compressors; vapour and gas power cycles, concepts of regeneration and reheat. I.C. Engines: Air-standard Otto, Diesel and dual cycles. Refrigeration and air-conditioning: Vapour and gas refrigeration and heat pump cycles; properties of moist air, psychrometric chart, basic psychrometric processes. Turbomachinery: Impulse and reaction principles, velocity diagrams, Pelton-wheel, Francis and Kaplan turbines; steam and gas turbines</td>
+        </tr>
+        <tr>
+            <td rowspan="11">Materials, Manufacturing, and Industrial Engineering</td>
+            <td>Engineering Materials</td>
+            <td>Structure and properties of engineering materials, phase diagrams, heat treatment, stress-strain diagrams for engineering materials</td>
+        </tr>
+        <tr>
+            <td>Casting, Forming and Joining Processes</td>
+             <td>Different types of castings, design of patterns, molds and cores; solidification and cooling; riser and gating design. Plastic deformation and yield criteria; fundamentals of hot and cold working processes; load estimation for bulk (forging, rolling, extrusion, drawing) and sheet (shearing, deep drawing, bending) metal forming processes; principles of powder metallurgy. Principles of welding, brazing, soldering and adhesive bonding</td>
+        </tr>
+        <tr>
+            <td>Machining and Machine Tool Operations</td>
+             <td>Mechanics of machining; basic machine tools; single and multi-point cutting tools, tool geometry and materials, tool life and wear; economics of machining; principles of non-traditional machining processes; principles of work holding, jigs and fixtures; abrasive machining processes; NC/CNC machines and CNC programming</td>
+        </tr>
+        <tr>
+            <td>Metrology and Inspection</td>
+            <td>Limits, fits and tolerances; linear and angular measurements; comparators; interferometry; form and finish measurement; alignment and testing methods; tolerance analysis in manufacturing and assembly; concepts of coordinate-measuring machine (CMM)</td>
+        </tr>
+        <tr>
+            <td>Computer Integrated Manufacturing</td>
+             <td>Basic concepts of CAD/CAM and their integration tools; additive manufacturing</td>
+        </tr>
+        <tr>
+            <td>Production Planning and Control</td>
+            <td>Forecasting models, aggregate production planning, scheduling, materials requirement planning; lean manufacturing</td>
+        </tr>
+        <tr>
+            <td>Inventory Control</td>
+            <td>Deterministic models; safety stock inventory control systems</td>
+        </tr>
+        <tr>
+            <td>Operations Research</td>
+            <td>Linear programming, simplex method, transportation, assignment, network flow models, simple queuing models, PERT and CPM</td>
+        </tr>
+    </tbody>
+</table>
+  <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Syllabus 2025 For General Aptitude</h1>
+            </div>
+            <h3>GATE ME Syllabus 2025 For General Aptitude
+The GATE ME General Aptitude syllabus evaluates candidates’ verbal and quantitative reasoning abilities. In order to succeed in a variety of technical professions, one must be able to comprehend and apply written knowledge, analyze data, find solutions, and draw logical conclusions.
+.</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Topics</th>
+            <th>Syllabus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4">Verbal Aptitude</td>
+            <td>English grammar</td>
+        </tr>
+        <tr>
+            <td>Vocabularies</td>
+        </tr>
+        <tr>
+            <td>Reading and comprehension</td>
+        </tr>
+        <tr>
+            <td>Narrative sequencing</td>
+        </tr>
+        <tr>
+            <td rowspan="7">Quantitative Aptitude</td>
+            <td>Data interpretation</td>
+        </tr>
+        <tr>
+            <td>2 & 3-dimensional plots</td>
+        </tr>
+        <tr>
+            <td>Maps & tables</td>
+        </tr>
+        <tr>
+            <td>Numerical computation & estimation that includes ratios, percentages, powers, exponents & logarithms</td>
+        </tr>
+        <tr>
+            <td>Permutations & combinations</td>
+        </tr>
+        <tr>
+            <td>Mensuration & geometry</td>
+        </tr>
+        <tr>
+            <td>Elementary statistics & probability</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Analytical Aptitude</td>
+            <td>Logic: Deduction & induction Analogy</td>
+        </tr>
+        <tr>
+            <td>Numerical relations & reasoning</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Spatial Aptitude</td>
+            <td>Transformation of shapes like translation, mirroring , rotation & scaling</td>
+        </tr>
+        <tr>
+            <td>Assembling & grouping</td>
+        </tr>
+        <tr>
+            <td>Paper folding, cutting, and patterns (2 & 3 dimensions)</td>
+        </tr>
+    </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Syllabus 2025 For Engineering Mathematics</h1>
+            </div>
+            <h3>GATE ME Syllabus 2025 For Engineering Mathematics
+There are seven main topics covered in the engineering mathematics section of the GATE ME syllabus 2025 transform theory, complex variables, probability and statistics, differential equations, linear algebra, and calculus. As seen below, these topics are further separated into their respective subjects.
+.</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Sub-topics</th>
+            <th>Syllabus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="5">Linear Algebra</td>
+            <td>Linear dependence and independence</td>
+        </tr>
+        <tr>
+            <td>Vector space</td>
+        </tr>
+        <tr>
+            <td>Matrix algebra, eigen values and eigen vectors</td>
+        </tr>
+        <tr>
+            <td>Solution of linear equations- existence and uniqueness</td>
+        </tr>
+        <tr>
+            <td>Rank</td>
+        </tr>
+        
+        <tr>
+            <td rowspan="6">Calculus</td>
+            <td>Mean value theorems</td>
+        </tr>
+        <tr>
+            <td>Theorems of integral calculus</td>
+        </tr>
+        <tr>
+            <td>Evaluation of definite and improper integrals</td>
+        </tr>
+        <tr>
+            <td>Partial derivatives, maxima and minima</td>
+        </tr>
+        <tr>
+            <td>Multiple integrals, line, surface and volume integrals</td>
+        </tr>
+        <tr>
+            <td>Taylor series</td>
+        </tr>
+
+        <tr>
+            <td rowspan="8">Differential Equations</td>
+            <td>First order equations (linear and nonlinear)</td>
+        </tr>
+        <tr>
+            <td>Higher order linear differential equations</td>
+        </tr>
+        <tr>
+            <td>Cauchy’s and Euler’s equations</td>
+        </tr>
+        <tr>
+            <td>Methods of solution using variation of parameters</td>
+        </tr>
+        <tr>
+            <td>Complementary function and particular integral</td>
+        </tr>
+        <tr>
+            <td>Partial differential equations</td>
+        </tr>
+        <tr>
+            <td>Variable separable method</td>
+        </tr>
+        <tr>
+            <td>initial and boundary value problems</td>
+        </tr>
+        <tr>
+            <td rowspan="4">Vector Analysis</td>
+            <td>Vectors in plane and space</td>
+        </tr>
+        <tr>
+            <td>Vector operations</td>
+        </tr>
+        <tr>
+            <td>Gradient, divergence and curl</td>
+        </tr>
+        <tr>
+            <td>Gauss’s, Green’s and Stokes’ theorems.</td>
+        </tr>
+
+        <tr>
+            <td rowspan="4">Complex Analysis</td>
+            <td>Analytic functions</td>
+        </tr>
+        <tr>
+            <td>Cauchy’s integral theorem</td>
+        </tr>
+        <tr>
+            <td>Cauchy’s integral formula, sequences, series, convergence tests</td>
+        </tr>
+        <tr>
+            <td>Taylor and Laurent series, residue theorem.</td>
+        </tr>
+
+        <tr>
+            <td rowspan="8">Probability and Statistics</td>
+            <td>Mean, median, mode, standard deviation</td>
+        </tr>
+        <tr>
+            <td>Combinatorial probability</td>
+        </tr>
+        <tr>
+            <td>Probability distributions</td>
+        </tr>
+        <tr>
+            <td>Binomial distribution</td>
+        </tr>
+        <tr>
+            <td>Poisson distribution</td>
+        </tr>
+        <tr>
+            <td>Exponential distribution</td>
+        </tr>
+        <tr>
+            <td>Normal distribution</td>
+        </tr>
+        <tr>
+            <td>Joint and conditional probability.</td>
+        </tr>
+    </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Syllabus 2025 For Core Subjects</h1>
+            </div>
+            <h3>GATE ME Syllabus 2025 For Core Subjects
+Candidates must be aware of the GATE Mechanical Engineering Syllabus 2025 to prepare well for the examination. The table below contains the Mechanical Engineering GATE syllabus.
+
+.</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Subjects</th>
+            <th>Syllabus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="5">Applied Mechanics & Design</td>
+            <td>Work and Energy</td>
+        </tr>
+        <tr>
+            <td>Law of Restitution</td>
+        </tr>
+        <tr>
+            <td>Structural Analysis</td>
+        </tr>
+        <tr>
+            <td>Heat Treatment</td>
+        </tr>
+        <tr>
+            <td>Defects in Crystal Structure</td>
+        </tr>
+        <tr>
+            <td rowspan="13">Material, Manufacturing & Industrial Engineering</td>
+            <td>EOQ Problems</td>
+        </tr>
+        <tr>
+            <td>Queuing Theory</td>
+        </tr>
+        <tr>
+            <td>Inventory Control</td>
+        </tr>
+        <tr>
+            <td>Linear Programming Problem</td>
+        </tr>
+        <tr>
+            <td>Linkages</td>
+        </tr>
+        <tr>
+            <td>Shafts Problems</td>
+        </tr>
+        <tr>
+            <td>Governors and Flywheel</td>
+        </tr>
+        <tr>
+            <td>Free Damped Vibrations</td>
+        </tr>
+        <tr>
+            <td>Pairs and their Applications</td>
+        </tr>
+        <tr>
+            <td>Inversions of Single and Double Slider Crank</td>
+        </tr>
+        <tr>
+            <td>Capillary</td>
+        </tr>
+        <tr>
+            <td>CNC Programming</td>
+        </tr>
+        <tr>
+            <td>Orthogonal Cutting</td>
+        </tr>
+        
+            <td rowspan="10">Fluid Mechanics & Thermal Science</td>
+            <td>Buoyancy</td>
+        </tr>
+        <tr>
+            <td>Surface Tension</td>
+        </tr>
+        <tr>
+            <td>Velocity Potential</td>
+        </tr>
+        <tr>
+            <td>Flow Through Pipes</td>
+        </tr>
+        <tr>
+            <td>Boundary Layer Theory</td>
+        </tr>
+        <tr>
+            <td>Applications of Bernoulli Equation</td>
+        </tr>
+        <tr>
+            <td>Steam Turbines</td>
+        </tr>
+        <tr>
+            <td>Laws of Thermodynamics</td>
+        </tr>
+        <tr>
+            <td>Second Law and First Law Problems</td>
+        </tr>
+        <tr>
+            <td>Problems on Diesel, Otto, data cycle</td>
+        </tr>
+    </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Syllabus Weightage 2025</h1>
+            </div>
+            <h3>The GATE exam syllabus for mechanical engineering will be made available online by the authorities. Candidates who want to take the GATE 2025 Mechanical Engineering exam can learn what subjects they need to study for the exam from the syllabus.
+
+</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Topics</th>
+            <th>Expected Weightage in Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>General Aptitude</td>
+            <td>15</td>
+        </tr>
+        <tr>
+            <td>Engineering Mathematics</td>
+            <td>12.25</td>
+        </tr>
+        <tr>
+            <td>Engineering Mechanics</td>
+            <td>2.5</td>
+        </tr>
+        <tr>
+            <td>Strength of materials</td>
+            <td>7.75</td>
+        </tr>
+        <tr>
+            <td>Heat Transfer</td>
+            <td>6</td>
+        </tr>
+        <tr>
+            <td>Machine Design</td>
+            <td>3.75</td>
+        </tr>
+        <tr>
+            <td>Fluid Mechanics</td>
+            <td>7.5</td>
+        </tr>
+        <tr>
+            <td>Theory of Mechanics</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td>Thermodynamics</td>
+            <td>12.75</td>
+        </tr>
+        <tr>
+            <td>Refrigeration & Air Conditioning</td>
+            <td>1.25</td>
+        </tr>
+        <tr>
+            <td>Industrial Engineering</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>Manufacturing Engineering</td>
+            <td>14.25</td>
+        </tr>
+    </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Exam Pattern 2025</h1>
+            </div>
+            <h3>Aspirants should review the detailed exam pattern before starting their GATE preparation. Candidates can get comprehensive information regarding the number of questions, time allotted, total number of marks, and other aspects of the GATE exam through the exam pattern for GATE 2025.
+
+</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Particulars</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Mode of Exam</td>
+            <td>Online</td>
+        </tr>
+        <tr>
+            <td>Number of Questions</td>
+            <td>65</td>
+        </tr>
+        <tr>
+            <td>Duration of Exam</td>
+            <td>3 hours</td>
+        </tr>
+        <tr>
+            <td>Pattern of Questions</td>
+            <td>
+                Multiple Choice Questions (MCQs)<br>
+                Numerical Answer Type Questions (NAT)
+            </td>
+        </tr>
+        <tr>
+            <td>Marking Scheme</td>
+            <td>
+                For MCQ’s - Test Paper carry 1 mark and 2 marks for questions with 13 and 23 negative marking for incorrect answers respectively.<br>
+                For NAT – No negative marking.
+            </td>
+        </tr>
+        <tr>
+            <td>Number of Sections</td>
+            <td>
+                Section 1- General Aptitude<br>
+                Section 2 – Engineering Mathematics and Core Discipline Questions.
+            </td>
+        </tr>
+        <tr>
+            <td>Topic wise weightage</td>
+            <td>
+                General Aptitude – 15%<br>
+                Engineering Mathematics – 15%<br>
+                Core Discipline Questions – 70%
+            </td>
+        </tr>
+    </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Exam Pattern 2025</h1>
+            </div>
+            
+        
+        
+         <h3><a href="C:\Users\murug\Downloads\ME Mechanical Engineering.pdf">syllabus pdf 2025 download</a></h3>
+     </div>
+ </div>
+ </section>
+</body>
+</html>

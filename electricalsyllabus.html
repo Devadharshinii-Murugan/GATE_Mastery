@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="pdf">Syllabus PDF</a></li>
+                   <li><a href="#General" onclick="scrollToContent()">Electrical Syllabus</a></li>
+                <li><a href="#EngineeringMathematics" onclick="scrollToMath()">For Engineering Mathematics</a></li>
+               <li><a href="#core">For Core</a></li>
+                <li><a href="#weightage" onclick="scrollToContent()">Weightage</a></li>
+                <li><a href="#tipsandtricks">Tips & Tricks</a></li>
+                <li><a href="#pattern">Electrical Pattern</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <br></br>
+         <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+           <h1>GATE Electrical Syllabus 2025</h1>
+       </div>
+         <br></br>
+         <h3>The GATE Electrical syllabus 2025 is divided into 11 different sections, each encompassing various topics:
+
+General Aptitude, Engineering Mathematics, Electric Circuits, Electromagnetic Fields, Signals and Systems, Electrical Machines, Power Systems, Control Systems, etc., as outlined below.</h3>
+     </br></br>
+ </div>
+</div>
+</section>
+<table>
+    <tr>
+        <th>Topics</th>
+        <th>Sub-Topics</th>
+    </tr>
+    <tr>
+        <td>Electric Circuits</td>
+        <td>Network elements, Network solution methods, Network Theorems, Transient response, Sinusoidal steady-state analysis, Resonance, Two port networks, Balanced three phase circuits, Star-delta transformation, Complex power and power factor in ac circuits</td>
+    </tr>
+    <tr>
+        <td>Electromagnetic Fields</td>
+        <td>Coulomb’s Law, Electric Field Intensity, Electric Flux Density, Gauss’s Law, Divergence, Electric field and potential due to point, line, plane and spherical charge distributions, Effect of dielectric medium, Capacitance of simple configurations, Biot‐Savart’s law, Ampere’s law, Curl, Faraday’s law, Lorentz force, Inductance, Magnetomotive force, Reluctance, Magnetic circuits, Self and Mutual inductance of simple configurations</td>
+    </tr>
+    <tr>
+        <td>Signals and Systems</td>
+        <td>Representation of continuous and discrete-time signals, Shifting and scaling properties, Linear time-invariant and causal systems, Fourier series representation of continuous and discrete-time periodic signals, Sampling theorem, Applications of Fourier Transform for continuous and discrete-time signals, Laplace Transform and Z transform, R.M.S. value, Average value calculation for any general periodic waveform</td>
+    </tr>
+    <tr>
+        <td>Electrical Machines</td>
+        <td>Single-phase transformer, Three-phase transformers, Auto-transformer, Electromechanical energy conversion principles, DC machines, Three-phase induction machines, Operating principle of single-phase induction motors, Synchronous machines, Types of losses and efficiency calculations of electric machines</td>
+    </tr>
+    <tr>
+        <td>Power Systems</td>
+        <td>Basic concepts of electrical power generation, ac and dc transmission concepts, Models and performance of transmission lines and cables, Economic Load Dispatch, Series and shunt compensation, Electric field distribution and insulators, Distribution systems, Per‐unit quantities, Bus admittance matrix, Gauss-Seidel and Newton-Raphson load flow methods, Voltage and Frequency Control, Power factor correction, Symmetrical components, Symmetrical and unsymmetrical fault analysis, Principles of protection, Circuit breakers, System stability concepts</td>
+    </tr>
+    <tr>
+        <td>Control Systems</td>
+        <td>Mathematical modeling and representation of systems, Feedback principle, Transfer function, Block diagrams and signal flow graphs, Transient and Steady‐state analysis, Stability analysis using Routh-Hurwitz and Nyquist criteria, Bode plots, Root loci, Compensators, P, PI and PID controllers, State-space model</td>
+    </tr>
+    <tr>
+        <td>Electrical and Electronic Measurements</td>
+        <td>Bridges and Potentiometers, Measurement of voltage, current, power, energy and power factor, Instrument transformers, Digital voltmeters and multimeters, Phase, Time and Frequency measurement, Oscilloscopes, Error analysis</td>
+    </tr>
+    <tr>
+        <td>Analog and Digital Electronics</td>
+        <td>Diode circuits, Amplifiers, Oscillators and feedback amplifiers, Operational amplifiers, Active Filters, Logic circuits, Multiplexers, Demultiplexers, Schmitt triggers, Sample and hold circuits, A/D and D/A converters</td>
+    </tr>
+    <tr>
+        <td>Power Electronics</td>
+        <td>Static V-I characteristics, Firing/gating circuits for Thyristor, MOSFET, IGBT, DC to DC conversion, Rectifiers, Voltage and Current commutated Thyristor based converters, Bidirectional ac to dc voltage source converters, Harmonic analysis, Voltage and current source inverters, Sinusoidal pulse width modulation</td>
+    </tr>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ME Syllabus 2025 For General Aptitude</h1>
+            </div>
+            <h3>GATE ME Syllabus 2025 For General Aptitude
+The GATE ME General Aptitude syllabus evaluates candidates’ verbal and quantitative reasoning abilities. In order to succeed in a variety of technical professions, one must be able to comprehend and apply written knowledge, analyze data, find solutions, and draw logical conclusions.
+.</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <thead>
+        <tr>
+            <th>Topics</th>
+            <th>Syllabus</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td rowspan="4">Verbal Aptitude</td>
+            <td>English grammar</td>
+        </tr>
+        <tr>
+            <td>Vocabularies</td>
+        </tr>
+        <tr>
+            <td>Reading and comprehension</td>
+        </tr>
+        <tr>
+            <td>Narrative sequencing</td>
+        </tr>
+        <tr>
+            <td rowspan="7">Quantitative Aptitude</td>
+            <td>Data interpretation</td>
+        </tr>
+        <tr>
+            <td>2 & 3-dimensional plots</td>
+        </tr>
+        <tr>
+            <td>Maps & tables</td>
+        </tr>
+        <tr>
+            <td>Numerical computation & estimation that includes ratios, percentages, powers, exponents & logarithms</td>
+        </tr>
+        <tr>
+            <td>Permutations & combinations</td>
+        </tr>
+        <tr>
+            <td>Mensuration & geometry</td>
+        </tr>
+        <tr>
+            <td>Elementary statistics & probability</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Analytical Aptitude</td>
+            <td>Logic: Deduction & induction Analogy</td>
+        </tr>
+        <tr>
+            <td>Numerical relations & reasoning</td>
+        </tr>
+        <tr>
+            <td rowspan="3">Spatial Aptitude</td>
+            <td>Transformation of shapes like translation, mirroring , rotation & scaling</td>
+        </tr>
+        <tr>
+            <td>Assembling & grouping</td>
+        </tr>
+        <tr>
+            <td>Paper folding, cutting, and patterns (2 & 3 dimensions)</td>
+        </tr>
+    </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE EE Syllabus 2025 - Engineering Mathematics</h1>
+            </div>
+           <h3>Linear algebra, calculus, differential equations, complex variables, probability and statistics, numerical methods, and transform theory are the seven main topics covered in the engineering mathematics section of the GATE EE syllabus 2025. These topics are further subdivided into respective subjects, as seen below:</h3>
+        </div>
+    </div>
+</section>
+
+<table>
+    <tr>
+        <th>Sub-topics</th>
+        <th>Syllabus</th>
+    </tr>
+    <tr>
+    <td>Linear Algebra</td>
+        <td>
+        Linear dependence and independence</br>
+        Vector space</br>
+        Matrix algebra, eigen values and eigen vectors</br>
+        Solution of linear equations - existence and uniqueness</br>
+        Rank</br>
+        </td>
+    </tr>
+    <tr>
+        <td>Calculus</td>
+        <td>
+            Mean value theorems<br>
+            Theorems of integral calculus<br>
+            Evaluation of definite and improper integrals<br>
+            Partial derivatives, maxima and minima<br>
+            Multiple integrals, line, surface and volume integrals<br>
+            Taylor series
+        </td>
+    </tr>
+    <tr>
+        <td>Differential Equations</td>
+        <td>
+            First order equations (linear and nonlinear)<br>
+            Higher order linear differential equations<br>
+            Cauchy’s and Euler’s equations<br>
+            Methods of solution using variation of parameters<br>
+            Complementary function and particular integral<br>
+            Partial differential equations<br>
+            Variable separable method<br>
+            Initial and boundary value problems
+        </td>
+    </tr>
+    <tr>
+        <td>Vector Analysis</td>
+        <td>
+            Vectors in plane and space<br>
+            Vector operations<br>
+            Gradient, divergence and curl<br>
+            Gauss’s, Green’s and Stokes’ theorems
+        </td>
+    </tr>
+    <tr>
+        <td>Complex Analysis</td>
+        <td>
+            Analytic functions<br>
+            Cauchy’s integral theorem<br>
+            Cauchy’s integral formula, sequences, series, convergence tests<br>
+            Taylor and Laurent series, residue theorem
+        </td>
+    </tr>
+    <tr>
+        <td>Probability and Statistics</td>
+        <td>
+            Mean, median, mode, standard deviation<br>
+            Combinatorial probability<br>
+            Probability distributions<br>
+            Binomial distribution<br>
+            Poisson distribution<br>
+            Exponential distribution<br>
+            Normal distribution<br>
+            Joint and conditional probability
+        </td>
+    </tr>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE EE Syllabus 2025 For Core Subjects</h1>
+            </div>
+           <h3>The GATE Electrical Engineering Paper includes various technical subjects which are mentioned below with their sub-topics:</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <tr>
+        <th>Subjects</th>
+        <th>Syllabus</th>
+    </tr>
+    <tr>
+        <td>Electric Circuits</td>
+        <td>
+            Ideal voltage<br>
+            Current sources<br>
+            Dependent sources<br>
+            R, L & C elements<br>
+            KCL & KVL<br>
+            Node & Mesh analysis<br>
+            Thevenin’s Theorems<br>
+            Norton’s Theorems<br>
+            Superposition Theorems<br>
+            Maximum Power Transfer theorem<br>
+            Transient response of dc & ac networks<br>
+            Sinusoidal steady-state analysis<br>
+            Resonance<br>
+            Two port networks<br>
+            Balanced three-phase circuits<br>
+            Star-delta transformation<br>
+            Complex power & power factor in ac circuits
+        </td>
+    </tr>
+    <tr>
+        <td>Electromagnetic Fields</td>
+        <td>
+            Coulomb’s Law<br>
+            Electric Field Intensity<br>
+            Electric Flux Density<br>
+            Gauss’s Law<br>
+            Divergence<br>
+            Electric field & potential due to point, line, plane, and spherical charge distributions<br>
+            Effect of a dielectric medium<br>
+            The capacitance of simple configurations<br>
+            Biot-Savart’s law<br>
+            Ampere’s law<br>
+            Curl<br>
+            Faraday’s law<br>
+            Lorentz force<br>
+            Inductance<br>
+            Magnetomotive force<br>
+            Reluctance<br>
+            Magnetic circuits<br>
+            Self & Mutual inductance of simple configurations
+        </td>
+    </tr>
+    <tr>
+        <td>Signals and Systems</td>
+        <td>
+            Representation of continuous & discrete-time signals<br>
+            Shifting & scaling properties<br>
+            Linear time-invariant & causal systems<br>
+            Fourier series representation of continuous time periodic signals<br>
+            Fourier series representation of discrete-time periodic signals<br>
+            Sampling theorem<br>
+            Applications of Fourier Transform for continuous-time signals<br>
+            Applications of Fourier Transform for discrete-time signals<br>
+            Laplace Transform<br>
+            Z transform
+        </td>
+    </tr>
+    <tr>
+        <td>Electrical Machines</td>
+        <td>
+            Single phase transformer<br>
+            Equivalent circuit<br>
+            Phasor diagram<br>
+            Open circuit tests<br>
+            Short circuit tests<br>
+            Regulation and efficiency<br>
+            Three-phase transformers<br>
+            Connections<br>
+            Vector groups<br>
+            Parallel operation<br>
+            Auto-transformer<br>
+            Electromechanical energy conversion principles<br>
+            DC machines<br>
+            Separately excited<br>
+            Series & shunt<br>
+            Motoring & generating mode of operation & their characteristics<br>
+            Speed control of dc motors<br>
+            Three-phase induction machines<br>
+            Principle of operation<br>
+            Types<br>
+            Performance<br>
+            Torque-speed characteristics<br>
+            No-load & blocked-rotor tests<br>
+            Equivalent circuit<br>
+            Starting & speed control<br>
+            Operating principle of single-phase induction motors<br>
+            Synchronous machines<br>
+            Cylindrical & salient pole machines<br>
+            Performance & characteristics<br>
+            Regulation & parallel operation of generators<br>
+            Starting of synchronous motors<br>
+            Types of losses & efficiency calculations of electric machines
+        </td>
+    </tr>
+    <tr>
+        <td>Power Systems</td>
+        <td>
+            Basic concepts of electrical power generation<br>
+            AC and DC transmission concepts<br>
+            Models and performance of transmission lines & cables<br>
+            Economic Load Dispatch (with & without considering transmission losses)<br>
+            Series & shunt compensation<br>
+            Electric field distribution<br>
+            Insulators<br>
+            Distribution systems<br>
+            Per-unit quantities<br>
+            Bus admittance matrix<br>
+            Gauss-Seidel & Newton-Raphson load flow methods<br>
+            Voltage & Frequency control<br>
+            Power factor correction<br>
+            Symmetrical components<br>
+            Symmetrical & unsymmetrical fault analysis<br>
+            Principles of over-current, differential, directional & distance protection<br>
+            Circuit breakers<br>
+            System stability concepts<br>
+            Equal area criterion.
+        </td>
+    </tr>
+    <tr>
+        <td>Control Systems</td>
+        <td>
+            Mathematical modeling & representation of systems<br>
+            Feedback principle<br>
+            Transfer function<br>
+            Block diagrams<br>
+            Signal flow graphs<br>
+            Transient of linear time-invariant systems<br>
+            Steady-state analysis of linear time-invariant systems<br>
+            Stability analysis<br>
+            Using Routh-Hurwitz<br>
+            Using Nyquist criteria<br>
+            Using Bode plots<br>
+            Using Root loci<br>
+            Lag, Lead & Lead-Lag compensators<br>
+            P, PI & PID controllers<br>
+            State space model<br>
+            Solution of state equations of LTI systems.
+        </td>
+    </tr>
+    <tr>
+        <td>Electrical and Electronic Measurements</td>
+        <td>
+            Bridges & Potentiometers<br>
+            Measurement of voltage & current<br>
+            Measurement of power, energy & power factor<br>
+            Instrument transformers<br>
+            Digital voltmeters & multimeters<br>
+            Phase, Time & Frequency measurement; Oscilloscopes<br>
+            Error analysis.
+        </td>
+    </tr>
+    <tr>
+        <td>Analog and Digital Electronics</td>
+        <td>
+            Clipping, clamping & rectifiers<br>
+            Amplifiers<br>
+            Biasing<br>
+            Equivalent circuit<br>
+            Frequency response<br>
+            Oscillators<br>
+            Feedback amplifiers<br>
+            Operational amplifiers: characteristics & applications<br>
+            Single-stage active filters<br>
+            Active Filters<br>
+            Sallen Key<br>
+            Butterworth<br>
+            VCOs<br>
+            Timers<br>
+            Digital Circuit<br>
+            Combinatorial logic circuit<br>
+            Sequential logic circuits<br>
+            Multiplexers<br>
+            Demultiplexers<br>
+            Schmitt triggers<br>
+            Sample and hold circuits<br>
+            Analog to Digital Converter<br>
+            Digital to Analog converter
+        </td>
+    </tr>
+    <tr>
+        <td>Power Electronics</td>
+        <td>
+            Static V-I characteristics & firing/gating circuits<br>
+            Thyristor, MOSFET, IGBT<br>
+            DC to DC conversion: Buck, Boost, Buck-Boost Converters<br>
+            Single & three-phase configuration of uncontrolled rectifiers<br>
+            Voltage & Current commutated Thyristor based converters<br>
+            Bidirectional ac to dc voltage source converters<br>
+            Magnitude & Phase of line current harmonics for uncontrolled & thyristor-based converters<br>
+            Power factor of ac to dc converters<br>
+            Distortion Factor of ac to dc converters<br>
+            Single-phase & three-phase voltage and current source inverters<br>
+            Sinusoidal pulse width modulation
+        </td>
+    </tr>
+</table>
+
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE EE Syllabus 2025 Weightage</h1>
+            </div>
+           <h3>Candidates must attentively examine the details and adjust their preparation plan accordingly. The GATE EE Syllabus weightage is shown in the table below.</h3>
+        </div>
+    </div>
+</section>
+<table>
+    <tr>
+        <th>Subjects</th>
+        <th>Marks Weightage</th>
+    </tr>
+    <tr>
+        <td>General Aptitude</td>
+        <td>15</td>
+    </tr>
+    <tr>
+        <td>Engineering Mathematics</td>
+        <td>13</td>
+    </tr>
+    <tr>
+        <td>Signals and Systems</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>Electromagnetic</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>Electrical Machines</td>
+        <td>12</td>
+    </tr>
+    <tr>
+        <td>Analog Circuits</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>Digital Circuits</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>Power Systems</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>Control Systems</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>Electric Circuits</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>Power Electronics</td>
+        <td>11</td>
+    </tr>
+    <tr>
+        <td>Electrical Measurements</td>
+        <td>2</td>
+    </tr>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE EE Exam Pattern 2025</h1>
+            </div>    
+         <h3><a href="C:\Users\murug\Downloads\EE Electrical Engineering.pdf">syllabus pdf 2025 download</a></h3>
+     </div>
+ </div>
+ </section>
+
+</body>
+</body>
+</html>
+

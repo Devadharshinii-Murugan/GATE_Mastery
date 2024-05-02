@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAT & GATE Mastery</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0; /* Add margin to the body */
+        }
+
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px; /* Adjust padding */
+        }
+        .navbar-scrolled {
+    top: 0; /* Bring the navigation bar to the top when scrolled */
+    ; /* Add a shadow for visual effect */
+}
+        .rectangle-box {
+    width: 100%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.rectangle-box:hover {
+    background-color: #f0f0f0; /* Change background color on hover */
+}
+
+
+        h1 {
+            font-size: 28px;
+            margin-left: 20px; /* Add margin to the left */
+        }
+        table {
+            margin: 0 auto 20px;
+            border-collapse: collapse;
+            width: 80%;
+            border: 2px solid black; /* Added black border */
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border: 1px solid black; 
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        /* Updated table colors */
+        table {
+            background-color: #ebebeb;
+        }
+
+        th, td {
+            background-color: #ebebeb;
+        }
+
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .menu li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+            padding: 10px; /* Add padding */
+            border-radius: 5px; /* Add border radius */
+        }
+
+        .menu li a:hover {
+            color: #ffc107;
+            background-color: rgba(255, 255, 255, 0.1); /* Add background color on hover */
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            background-image: url('https://img.internethaber.com/storage/files/images/2022/07/24/lgs-2022-nP27_cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .syllabus-section {
+            margin-bottom: 20px;
+        }
+        .syllabus-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            margin-left: 70px; 
+        }
+        .syllabus-subsection {
+            margin-left: 20px;
+            margin-bottom: 10px;
+            margin-left: 90px; 
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 5;
+        }
+
+        /* Content Section Styles */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px; /* Add padding */
+            margin-bottom: 20px; /* Add margin to the bottom */
+        }
+
+        .text {
+            flex: 1;
+            padding: 0 20px;
+        }
+
+        .boxed {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            align-items: center;
+        }
+
+        .boxed h2 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+
+        .boxed p {
+            font-size: 16px;
+            line-height: 1.6;
+
+        }
+
+        .right-image {
+            width: 30%;
+            height: auto;
+            order: 1; /* Change the order of the element */
+        }
+
+        .left-image {
+            width: 30%;
+            height: auto;
+            order: -1; /* Change the order of the element */
+        }
+
+        .card {
+            width: calc(33.33% - 20px); /* Adjust card width for responsive layout */
+            margin-bottom: 40px; /* Adjust margin for spacing between cards */
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:last-child {
+            margin-right: 0; /* Remove margin from the last card to avoid extra spacing */
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: #666;
+            line-height: 1.5;
+        }
+        .white-box {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.text {
+    margin-left: 20px; /* Adjust margin as needed */
+}
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+        .content-wrapper {
+             width: 100%;
+    display: flex;
+    flex-direction: row-reverse; /* Reverse the order */
+}
+
+.text {
+    flex: 1;
+    padding: 20px;
+}
+
+.left-image {
+    max-width: 50%; /* Adjust width as needed */
+    height: auto;
+}
+
+
+
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 0;
+            text-align: center;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .card-btn:hover {
+            background-color: #45a049;
+        }
+       .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: box-shadow 0.3s;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Initial shadow */
+}
+.text {
+    flex: 1;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+
+.boxed {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    align: center;
+}
+
+.right-image {
+    max-width: 50%;
+    height: auto;
+}
+   .container {
+    max-width: 100%; /* Full width */
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.row {
+    display: flex;
+}
+.circle-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.central-box {
+    background-color: #ffc0cb; /* Light pink */
+    color: #000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%; /* 70% width */
+}
+
+.surrounding-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+}
+
+.content {
+    text-align: center;
+}
+
+.content-wrapper {
+    margin: 15px;
+    text-align: center;
+}
+
+.boxed {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.surrounding-boxes 
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%; /* Full width */
+    max-width: 800px; /* Maximum width */
+    margin: 0 auto;
+}
+
+.surrounding-box {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    flex-basis: calc(50% - 30px); /* Adjust width of each box */
+    max-width: calc(50% - 30px); /* Adjust max-width of each box */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 770px) {
+    .surrounding-box {
+        flex-basis: calc(100% - 50px); /* Full width on smaller screens */
+        max-width: calc(100% - 50px); /* Adjust max-width on smaller screens */
+    }
+}
+   .circle-container {
+        text-align: center;
+    }
+
+    .circle-container img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .circle-container h3 {
+        margin-top: 10px;
+    }
+
+    .circle-container p {
+        margin-top: 5px;
+    }
+    .circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     margin: 20px; 
+}
+
+.circle-container:hover .circle {
+    transform: scale(1.1); /* Scale up the circle on hover */
+}
+
+.circle-container:hover p {
+    color: darkblue; /* Change text color on hover */
+}
+
+    .btn {
+            background-color: orangered; /* Button background color */
+            color: #fff;
+            border: none;
+            width: 12%; /* Occupy full width */
+            padding: 8px 5px; /* Adjusted padding */
+            font-size: 14px; /* Adjusted font size */
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #e2574c; /* Darken button color on hover */
+            
+        }
+        /* Remove duplicate button style */
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #4CAF50; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+            size: 10px;
+        }
+        .footer {
+            color: black;
+            font-size: 14px;
+            margin-top: auto; /* Align footer to the bottom */
+        }
+        form {
+            width: 50%; /* Set form width */
+            padding: 20px;
+            background-color: white; /* Set background color */
+            border-radius: 10px; /* Add border radius for rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%; /* Set input and button width */
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc; /* Add border */
+            border-radius: 5px; /* Add border radius for rounded corners */
+            box-sizing: border-box; /* Ensure padding and border are included in width */
+            font-family: "Poppins", sans-serif; /* Use Poppins font */
+            font-size: 16px; /* Set font size */
+        }
+        button {
+            background-color: #45a049; /* Set button background color */
+            color: white; /* Set button text color */
+            cursor: pointer; /* Add pointer cursor on hover */
+        }
+        button:hover {
+            background-color: #45a049; /* Darken button color on hover */
+        }
+</style>
+</head>
+<body>
+      <header>
+        <nav>
+            <h1>GATE Mastery</h1>
+            <ul class="menu">
+                <li><a href="pdf">Syllabus PDF</a></li>
+                   <li><a href="#General" onclick="scrollToContent()">ECE Syllabus</a></li>
+                <li><a href="#EngineeringMathematics" onclick="scrollToMath()">For Engineering Mathematics</a></li>
+               <li><a href="#core">For Core</a></li>
+                <li><a href="#weightage" onclick="scrollToContent()">Weightage</a></li>
+                <li><a href="#tipsandtricks">Tips & Tricks</a></li>
+                <li><a href="#pattern">ECE Pattern</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+     <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>Syllabus For ECE</h1>
+            </div>
+            <h3>The GATE ECE Syllabus 2025 (Electronics and Communication Engineering) is structured into eight sections: Engineering Mathematics, Networks, Signals, and Systems, Electronic Devices, Analog Circuits, Digital Circuits, Control Systems, Communications, and Electromagnetics</h3>
+        </div>
+    </div>
+</section>
+<table>
+  <thead>
+    <tr>
+      <th>Sl. No.</th>
+      <th>Sections</th>
+      <th>Topic-Wise Syllabus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Engineering Mathematics</td>
+      <td>Linear Algebra<br>Calculus<br>Differential Equations<br>Vector Analysis</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Networks, Signals and Systems</td>
+      <td>Circuit analysis: Node and mesh analysis, superposition, Thevenin’s theorem, Norton’s theorem, reciprocity. Sinusoidal steady state analysis: phasors, complex power, maximum power transfer. Time and frequency domain analysis of linear circuits: RL, RC and RLC circuits, solution of network equations using Laplace transform, Linear 2-port network parameters, wye-delta transformation<br>Continuous-time signals: Fourier series and Fourier transform, sampling theorem and applications<br>Discrete-time signals: DTFT, DFT, z-transform, discrete-time processing of continuous-time signals. LTI systems: definition and properties, causality, stability, impulse response, convolution, poles and zeroes, frequency response, group delay, phase delay</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Electronic Devices</td>
+      <td>Energy bands in intrinsic and extrinsic semiconductors, equilibrium carrier concentration, direct and indirect band-gap semiconductors.<br>Carrier transport: diffusion current, drift current, mobility and resistivity, generation and recombination of carriers, Poisson, and continuity equations. P-N junction, Zener diode, BJT, MOS capacitor, MOSFET, LED, photodiode, and solar cell.</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Analog Circuits</td>
+      <td>Diode circuits: clipping, clamping, and rectifiers.<br>BJT and MOSFET amplifiers: biasing, ac coupling, small-signal analysis, frequency response. Current mirrors and differential amplifiers.<br>Op-amp circuits: Amplifiers, summers, differentiators, integrators, active filters, Schmitt triggers, and oscillators</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>Digital Circuits</td>
+      <td>Number representations: binary, integer, and floating-point- numbers.<br>Combinatorial circuits: Boolean algebra, minimization of functions using Boolean identities and Karnaugh map, logic gates, and their static CMOS implementations, arithmetic circuits, code converters, multiplexers, and decoders.<br>Sequential circuits: latches and flip-flops, counters, shift-registers, finite state machines, propagation delay, setup and hold time, critical path delay.<br>Data converters: sample and hold circuits, ADCs, and DACs.<br>Semiconductor memories: ROM, SRAM, DRAM.<br>Computer organization: Machine instructions and addressing modes, ALU, data-path, control unit, instruction pipelining</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>Control Systems</td>
+      <td>Basic control system components; Feedback principle; Transfer function; Block diagram representation; Signal flow graph; Transient and steady-state analysis of LTI systems; Frequency response; Routh-Hurwitz and Nyquist stability criteria; Bode and root-locus plots; Lag, lead and lag-lead compensation; State variable model and solution of state equation of LTI systems.</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>Communications</td>
+      <td>Random processes: autocorrelation and power spectral density, properties of white noise, filtering of random signals through LTI systems.<br>Analog communications: amplitude modulation and demodulation, angle modulation and demodulation, spectra of AM and FM, superheterodyne receivers.<br>Information theory: entropy, mutual information, and channel capacity theorem.<br>Digital communications: PCM, DPCM, digital modulation schemes (ASK, PSK, FSK, QAM), bandwidth, inter-symbol interference, MAP, ML detection, matched filter receiver, SNR, and BER.<br>Fundamentals of error correction, Hamming codes, CRC.</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>Electromagnetics</td>
+      <td>Maxwell’s equations: differential and integral forms and their interpretation, boundary conditions, wave equation, Poynting vector.<br>Plane waves and properties: reflection and refraction, polarization, phase and group velocity, propagation through various media, skin depth.<br>Transmission lines: equations, characteristic impedance, impedance matching, impedance transformation, S-parameters, Smith chart.<br>Rectangular and circular waveguides, light propagation in optical fibers, dipole and monopole antennas, linear antenna arrays.</td>
+    </tr>
+</tbody>
+</table>
+</div>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>Syllabus For General Aptitude</h1>
+            </div>
+             <h3> the General Aptitude section of the GATE ECE syllabus tests your skills in understanding and using written information, analyzing data, and solving problems logically. It's important for success in technical fields because it assesses your verbal and numerical reasoning abilities.
+            </h3>
+        </div>
+    </div>
+</section>
+<table>
+  <thead>
+    <tr>
+      <th>Topics</th>
+      <th>Syllabus</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Verbal Aptitude</td>
+      <td>English grammar<br>Vocabularies<br>Reading and comprehension<br>Narrative sequencing</td>
+    </tr>
+    <tr>
+      <td>Quantitative Aptitude</td>
+      <td>Data interpretation<br>2 & 3-dimensional plots<br>Maps & tables<br>Numerical computation & estimation that includes ratios, percentages, powers, exponents & logarithms<br>Permutations & combinations<br>Mensuration & geometry<br>Elementary statistics & probability</td>
+    </tr>
+    <tr>
+      <td>Analytical Aptitude</td>
+      <td>Logic: Deduction & induction Analogy<br>Numerical relations & reasoning</td>
+    </tr>
+    <tr>
+      <td>Spatial Aptitude</td>
+      <td>Transformation of shapes like translation, mirroring , rotation & scaling<br>Assembling & grouping<br>Paper folding, cutting, and patterns (2 & 3 dimensions)</td>
+    </tr>
+</tbody>
+</table>
+</div>
+  </tbody>
+</table>
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ECE Syllabus 2025 For Engineering Mathematics</h1>
+            </div>
+             <h3> Engineering Mathematics is going to be an important part of the GATE ECE syllabus. It covers basic ideas and mathematical methods that are used in electronics and communication engineering. It improves aspirants’ abilities to solve problems, think logically, and deal with challenging engineering problems effectively.            </h3>
+        </div>
+    </div>
+</section>
+<table>
+        <thead>
+            <tr>
+                <th>Topics</th>
+                <th>Syllabus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Linear Algebra</td>
+                <td>
+                    <p>Linear dependence and independence</p>
+                    <p>Vector space</p>
+                    <p>Matrix algebra, eigen values and eigen vectors</p>
+                    <p>Solution of linear equations- existence and uniqueness</p>
+                    <p>Rank</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Calculus</td>
+                <td>
+                    <p>Mean value theorems</p>
+                    <p>Theorems of integral calculus</p>
+                    <p>Evaluation of definite and improper integrals</p>
+                    <p>Partial derivatives, maxima and minima</p>
+                    <p>Multiple integrals, line, surface and volume integrals</p>
+                    <p>Taylor series</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Differential Equations</td>
+                <td>
+                    <p>First order equations (linear and nonlinear)</p>
+                    <p>Higher order linear differential equations</p>
+                    <p>Cauchy’s and Euler’s equations</p>
+                    <p>Methods of solution using variation of parameters</p>
+                    <p>Complementary function and particular integral</p>
+                    <p>Partial differential equations</p>
+                    <p>Variable separable method</p>
+                    <p>Initial and boundary value problems</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Vector Analysis</td>
+                <td>
+                    <p>Vectors in plane and space</p>
+                    <p>Vector operations</p>
+                    <p>Gradient, divergence and curl</p>
+                    <p>Gauss’s, Green’s and Stokes’ theorems</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Complex Analysis</td>
+                <td>
+                    <p>Analytic functions</p>
+                    <p>Cauchy’s integral theorem</p>
+                    <p>Cauchy’s integral formula, sequences, series, convergence tests</p>
+                    <p>Taylor and Laurent series, residue theorem</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Probability and Statistics</td>
+                <td>
+                    <p>Mean, median, mode, standard deviation</p>
+                    <p>Combinatorial probability</p>
+                    <p>Probability distributions</p>
+                    <p>Binomial distribution</p>
+                    <p>Poisson distribution</p>
+                    <p>Exponential distribution</p>
+                    <p>Normal distribution</p>
+                    <p>Joint and conditional probability</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ECE Syllabus 2025 For Core Subjects</h1>
+            </div>
+             <h3>The core section covers the questions from the specific subjects learn by students in the undergraduate level studies. The list of subjects and sub-topics are mentioned below:
+          </h3>
+        </div>
+    </div>
+</section>
+<table>
+        <thead>
+            <tr>
+                <th>Subject Name</th>
+                <th>Sub-topics</th>
+                <th>Syllabus</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="4">Networks , Signal & Systems</td>
+                <td>Circuit Analysis</td>
+                <td>
+                    <p>Node and mesh analysis</p>
+                    <p>Superposition, Thevenin’s theorem, Norton’s theorem & reciprocity.</p>
+                    <p>Sinusoidal steady state analysis: phasors, complex power</p>
+                    <p>Maximum power transfer.</p>
+                    <p>Time and frequency domain analysis of linear circuits such as RL, RC and RLC circuits</p>
+                    <p>Solution of network equations using Laplace transform</p>
+                    <p>Linear 2-port network parameters, wye-delta transformation.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Continuous-time Signals</td>
+                <td>
+                    <p>Fourier series</p>
+                    <p>Fourier transform</p>
+                    <p>Sampling theorem and applications.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Discrete-time Signals</td>
+                <td>
+                    <p>DTFT, DFT, z-transform</p>
+                    <p>Discrete-time processing of continuous-time signals.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>LTI systems</td>
+                <td>
+                    <p>Definition and properties, causality & stability, their impulse response & convolution, poles & zeroes,</p>
+                    <p>Frequency response, group delay, phase delay</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">Electronic Device</td>
+                <td>Semiconductors</td>
+                <td>
+                    <p>Energy bands in semiconductors</p>
+                    <p>Equilibrium carrier concentration</p>
+                    <p>Direct and indirect band-gap semiconductors</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Carrier Transport</td>
+                <td>
+                    <p>Diffusion current & drift current</p>
+                    <p>Mobility and resistivity</p>
+                    <p>Generation and recombination of carriers</p>
+                    <p>Poisson and continuity equations.</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Diode</td>
+                <td>
+                    <p>P-N junction & Zener diode</p>
+                    <p>BJT, MOS capacitor & MOSFET</p>
+                    <p>LED, photo diode & solar cell</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="3">Analog Circuits</td>
+                <td>Diode Circuits</td>
+                <td>
+                    <p>Clipping, clamping & rectifiers</p>
+                    <p>BJT & MOSFET</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Amplifiers</td>
+                <td>
+                    <p>Biasing</p>
+                    <p>AC coupling, small signal analysis & frequency response</p>
+                    <p>Current mirrors & differential amplifiers</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Op-amp Circuits</td>
+                <td>
+                    <p>Amplifiers</p>
+                    <p>Summers, differentiators & integrators</p>
+                    <p>Active filters</p>
+                    <p>Schmitt triggers & oscillators</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="6">Digital Circuits</td>
+                <td>Number Representations</td>
+                <td>
+                    <p>Binary Number system</p>
+                    <p>Integer & floating-point- numbers</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Combinatorial circuits</td>
+                <td>
+                    <p>Boolean algebra</p>
+                    <p>Minimization of boolean functions using Boolean identities & Karnaugh map</p>
+                    <p>Logic gates & their static CMOS implementations</p>
+                    <p>Arithmetic circuits</p>
+                    <p>Code converters</p>
+                    <p>Multiplexers & decoders</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Sequential Circuits</td>
+                <td>
+                    <p>Latches & flip-flops</p>
+                    <p>Counters & shift-registers</p>
+                    <p>Finite state machines</p>
+                    <p>Propagation delay & critical path delay</p>
+                    <p>Setup and hold time</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Data Converters Semiconductor</td>
+                <td>
+                    <p>Sample & hold circuits</p>
+                    <p>ADCs & DACs</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Memories</td>
+                <td>
+                    <p>ROM</p>
+                    <p>SRAM</p>
+                    <p>DRAM</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Computer Organization</td>
+                <td>
+                    <p>Machine instructions & addressing modes</p>
+                    <p>ALU, data-path & control unit</p>
+                    <p>Instruction pipelining</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="2">Control Systems</td>
+                <td>Basic control system components</td>
+                <td>
+                    <p>Feedback principle</p>
+                    <p>Transfer function</p>
+                    <p>Block diagram representation</p>
+                    <p>Signal flow graph</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Transient and steady-state analysis of LTI systems</td>
+                <td>
+                    <p>Frequency response</p>
+                    <p>Routh-Hurwitz & Nyquist stability criteria</p>
+                    <p>Bode and root-locus plots</p>
+                    <p>Lag, lead & laglead compensation</p>
+                    <p>State variable model</p>
+                    <p>Solution of state equation of LTI systems</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="4">Communications</td>
+                <td>Random Processes</td>
+                <td>
+                    <p>Auto correlation & power spectral density</p>
+                    <p>Properties of white noise</p>
+                    <p>Filtering of random signals through LTI systems</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Analog Communications</td>
+                <td>
+                    <p>Amplitude modulation & demodulation</p>
+                    <p>Angle modulation & demodulation</p>
+                    <p>Spectra of AM & FM</p>
+                    <p>Super heterodyne receivers</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Information Theory</td>
+                <td>
+                    <p>Entropy</p>
+                    <p>Mutual information</p>
+                    <p>Channel capacity theorem</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Digital Communications</td>
+                <td>
+                    <p>PCM, DPCM</p>
+                    <p>Digital modulation schemes (ASK, PSK, FSK, QAM) & their bandwidth</p>
+                    <p>Inter-symbol interference</p>
+                    <p>MAP & ML detection</p>
+                    <p>Matched filter receiver</p>
+                    <p>SNR and BER</p>
+                    <p>Fundamentals of error correction</p>
+                    <p>Hamming codes</p>
+                    <p>CRC</p>
+                </td>
+            </tr>
+            <tr>
+                <td rowspan="6">Electromagnetics</td>
+                <td>Maxwell’s Equations</td>
+                <td>
+                    <p>Differential and integral forms and their interpretation</p>
+                    <p>Boundary conditions</p>
+                    <p>Wave equation</p>
+                    <p>Poynting vector</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Plane Waves and Properties</td>
+                <td>
+                    <p>Reflection and refraction polarization</p>
+                    <p>Phase and group velocity</p>
+                    <p>Propagation through various media</p>
+                    <p>Skin depth</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Transmission Lines</td>
+                <td>
+                    <p>Equations</p>
+                    <p>Characteristic impedance</p>
+                    <p>Impedance matching</p>
+                    <p>Impedance transformation</p>
+                    <p>S-parameters</p>
+                    <p>Smith chart</p>
+                </td>
+            </tr>
+            <tr>
+                <td>Waveguides and Antenna</td>
+                <td>
+                    <p>Rectangular and circular waveguides</p>
+                    <p>Light propagation in optical fibers</p>
+                    <p>Dipole and monopole antennas</p>
+                    <p>Linear antenna arrays</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+<section id="content" class="content">
+    <div class="content-wrapper" id="contentBox">
+   <div class="text">
+            <div class="boxed">
+                <h1>GATE ECE syllabus 2025 pdf</h1>
+            </div>
+         <h3><a href="C:\Users\murug\Downloads\ECEl Electronics and Communications.pdf">  <p>GATE ECE syllabus 2025 pdf download.aspirants can download it.here some of Section wise Topics.</p></a></h3>
+     </div>
+ </div>
+ </section>
+
+</body>
+</body>
+</html>
+</body>
